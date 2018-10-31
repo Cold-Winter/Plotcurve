@@ -26,7 +26,7 @@ lid_limited = [0, 0.9795081967213115, 0.9972677595628415, 0.9986338797814208, 0.
 
 x = [0:30:400];
 % strain_image = plot(x,redseqdpp,'ks-',x,reseqdpp,'b>-',x,seqdpp_5,'m+:',x,seqdpp,'ro--',x,seqdpp_12,'gd--',x,uniform,'cx-.',x,dpplstm,'k*:');
-strain_image = plot(x,thermstep*0.912,'m+:',x,lid,'cx-.',x,encoding,'ro--',x,saprunstep,'ks-', x,thermadv_limited*0.577,'md:',x,lid_limited,'c^-.',x,therm_limited*0.8592,'r>--',x,sap_limited*0.387,'k<-');
+strain_image = plot(x,thermstep*0.912,'m+:',x,lid,'cx-.',x,encoding,'ro--',x,saprunstep,'ks-', x,thermadv_limited*0.57.7,'m+:',x,lid_limited,'cx-.',x,therm_limited,'ro--',x,sap_limited,'ks-');
 
 ylabel('Attack success Rate %');
 xlabel('Number of iterations T');
