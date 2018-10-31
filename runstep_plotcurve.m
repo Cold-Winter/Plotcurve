@@ -19,11 +19,11 @@ cascade = [0, 0.36886993603411516, 0.5970149253731343, 0.7569296375266524, 0.823
 std = [0, 0.9991666666666666, 0.9995833333333334, 0.9995833333333334, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0];
 x = [0:30:400];
 % strain_image = plot(x,redseqdpp,'ks-',x,reseqdpp,'b>-',x,seqdpp_5,'m+:',x,seqdpp,'ro--',x,seqdpp_12,'gd--',x,uniform,'cx-.',x,dpplstm,'k*:');
-strain_image = plot(x,std,'k*:',x,lid,'cx-.',x,robuststep,'b>-',x,encoding,'ro--',x,saprunstep,'ks-',x,cascade,'gd--',x,thermstep,'m+:');
+strain_image = plot(x,thermstep,'m+:',x,lid,'cx-.',x,encoding,'ro--',x,saprunstep,'ks-',x,robuststep,'b>-',x,cascade,'gd--',x,std,'k*:');
 
 ylabel('Attack success Rate %');
 xlabel('Number of iterations T');
-legend('ORIGIN','LID','RSE','THERM','SAP','CAS-ADV','THERM-ADV');
+legend('THERM-ADV','LID','THERM','SAP','RSE','CAS-ADV','VANILLA-1');
 
 set(gca,'XTick',[0:30:400]);
 % set(gca, 'XTicklabel',{'K=8','K=12','K=16','K=\infty'}); 
