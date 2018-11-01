@@ -1,0 +1,3040 @@
+2018-10-31 13:17:06.059367: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-10-31 13:17:06.989739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:86:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-31 13:17:07.443521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 1 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:af:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-31 13:17:07.443746: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Device peer to peer matrix
+2018-10-31 13:17:07.443783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1051] DMA: 0 1 
+2018-10-31 13:17:07.443792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 0:   Y N 
+2018-10-31 13:17:07.443800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 1:   N Y 
+2018-10-31 13:17:07.443815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Graphics Device, pci bus id: 0000:86:00.0, compute capability: 6.1)
+2018-10-31 13:17:07.443825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Graphics Device, pci bus id: 0000:af:00.0, compute capability: 6.1)
+2018-10-31 13:17:14.113878: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Graphics Device, pci bus id: 0000:86:00.0, compute capability: 6.1)
+2018-10-31 13:17:14.113930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Graphics Device, pci bus id: 0000:af:00.0, compute capability: 6.1)
+/home/yandong/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/yandong/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/ssd/re_attack/limited-blackbox-attacks/therm_adv/attacks_cifar10.py:14: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "main.py", line 9, in <module>
+    import attacks_cifar10 as attacks
+  File "/ssd/re_attack/limited-blackbox-attacks/therm_adv/attacks_cifar10.py", line 4, in <module>
+    from tools.utils import *
+  File "/ssd/re_attack/limited-blackbox-attacks/therm_adv/tools/utils.py", line 7, in <module>
+    from matplotlib import pyplot as plt
+  File "/home/yandong/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 72, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/yandong/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+WARNING:tensorflow:From /ssd/re_attack/limited-blackbox-attacks/therm_adv/cifar_model.py:214: UniformUnitScaling.__init__ (from tensorflow.python.ops.init_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.initializers.variance_scaling instead with distribution=uniform to get equivalent behavior.
+{"samples_per_draw": 608, "batch_size": 608, "target_class": null, "orig_class": null, "sigma": 0.001, "epsilon": 0.031, "learning_rate": 0.01, "img_path": null, "img_index": 0, "out_dir": "query_limited/", "log_iters": 1, "restore": null, "momentum": 0.0, "max_queries": 400, "save_iters": 50, "plateau_drop": 2.0, "min_lr_ratio": 200, "plateau_length": 5, "gpus": null, "imagenet_path": null, "visualize": false, "max_lr": 0.01, "min_lr": 5e-05, "top_k": -1, "adv_thresh": -1.0, "label_only": false, "zero_iters": 100, "label_only_sigma": 0.001, "starting_eps": 1.0, "starting_delta_eps": 0.5, "min_delta_eps": 0.1, "conservative": 2, "cifar_path": "../cifar10_data/test_batch", "start": 0, "end": 100}
+attacking image index : 0
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0204 lr 1.00E-02 eps 0.031 (time 2.7274)
+[log] Annealing max_lr
+[log] early stopping at iteration 9
+clipimage succImages: 1  totalImages: 1
+attacking image index : 1
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 0.8034)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4147)
+Step 00020: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4245)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00030: loss -0.0006 lr 1.25E-03 eps 0.031 (time 0.4165)
+Step 00040: loss -0.0009 lr 1.25E-03 eps 0.031 (time 0.4295)
+Step 00050: loss -0.0011 lr 1.25E-03 eps 0.031 (time 0.4109)
+[log] Annealing max_lr
+Step 00060: loss -0.0012 lr 6.25E-04 eps 0.031 (time 0.4190)
+Step 00070: loss -0.0013 lr 6.25E-04 eps 0.031 (time 0.4365)
+Step 00080: loss -0.0015 lr 6.25E-04 eps 0.031 (time 0.4330)
+Step 00090: loss -0.0018 lr 6.25E-04 eps 0.031 (time 0.4139)
+[log] Annealing max_lr
+Step 00100: loss -0.0018 lr 3.13E-04 eps 0.031 (time 0.4198)
+Step 00110: loss -0.0019 lr 3.13E-04 eps 0.031 (time 0.4119)
+Step 00120: loss -0.0019 lr 3.13E-04 eps 0.031 (time 0.4278)
+Step 00130: loss -0.0020 lr 3.13E-04 eps 0.031 (time 0.4391)
+Step 00140: loss -0.0021 lr 3.13E-04 eps 0.031 (time 0.4613)
+Step 00150: loss -0.0021 lr 3.13E-04 eps 0.031 (time 0.4158)
+[log] Annealing max_lr
+Step 00160: loss -0.0021 lr 1.56E-04 eps 0.031 (time 0.4147)
+[log] Annealing max_lr
+Step 00170: loss -0.0021 lr 7.81E-05 eps 0.031 (time 0.4338)
+[log] Annealing max_lr
+Step 00180: loss -0.0021 lr 5.00E-05 eps 0.031 (time 0.4198)
+Step 00190: loss -0.0021 lr 5.00E-05 eps 0.031 (time 0.4570)
+Step 00200: loss -0.0021 lr 5.00E-05 eps 0.031 (time 0.4203)
+Step 00210: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4475)
+Step 00220: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4410)
+Step 00230: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4513)
+Step 00240: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4167)
+Step 00250: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4477)
+Step 00260: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4315)
+Step 00270: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4310)
+Step 00280: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00290: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4312)
+Step 00300: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4249)
+Step 00310: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4554)
+Step 00320: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4292)
+Step 00330: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4435)
+Step 00340: loss -0.0022 lr 5.00E-05 eps 0.031 (time 0.4113)
+Step 00350: loss -0.0023 lr 5.00E-05 eps 0.031 (time 0.4443)
+Step 00360: loss -0.0023 lr 5.00E-05 eps 0.031 (time 0.4263)
+Step 00370: loss -0.0023 lr 5.00E-05 eps 0.031 (time 0.4374)
+Step 00380: loss -0.0023 lr 5.00E-05 eps 0.031 (time 0.4250)
+Step 00390: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4479)
+Step 00400: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4525)
+Step 00410: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4527)
+Step 00420: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4140)
+Step 00430: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4399)
+Step 00440: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4515)
+Step 00450: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4440)
+Step 00460: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4314)
+Step 00470: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4414)
+Step 00480: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4392)
+Step 00490: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4377)
+Step 00500: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4199)
+Step 00510: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4424)
+Step 00520: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4286)
+Step 00530: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4581)
+Step 00540: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00550: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4305)
+Step 00560: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4348)
+Step 00570: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4320)
+Step 00580: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4291)
+Step 00590: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4254)
+clipimage succImages: 1  totalImages: 2
+attacking image index : 2
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.2485 lr 1.00E-02 eps 0.031 (time 0.8490)
+[log] early stopping at iteration 3
+clipimage succImages: 2  totalImages: 3
+attacking image index : 3
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 0.9557)
+[log] Annealing max_lr
+Step 00010: loss -0.0020 lr 5.00E-03 eps 0.031 (time 0.4453)
+[log] Annealing max_lr
+Step 00020: loss -0.0200 lr 2.50E-03 eps 0.031 (time 0.4185)
+Step 00030: loss -0.0863 lr 2.50E-03 eps 0.031 (time 0.4279)
+[log] Annealing max_lr
+Step 00040: loss -0.2593 lr 1.25E-03 eps 0.031 (time 0.4205)
+[log] Annealing max_lr
+Step 00050: loss -0.3673 lr 6.25E-04 eps 0.031 (time 0.4493)
+Step 00060: loss -0.4450 lr 6.25E-04 eps 0.031 (time 0.4196)
+Step 00070: loss -0.4764 lr 6.25E-04 eps 0.031 (time 0.4241)
+[log] Annealing max_lr
+Step 00080: loss -0.5166 lr 3.13E-04 eps 0.031 (time 0.4244)
+[log] Annealing max_lr
+Step 00090: loss -0.5426 lr 1.56E-04 eps 0.031 (time 0.4535)
+Step 00100: loss -0.5751 lr 1.56E-04 eps 0.031 (time 0.4576)
+[log] early stopping at iteration 108
+clipimage succImages: 3  totalImages: 4
+attacking image index : 4
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0003 lr 1.00E-02 eps 0.031 (time 1.2397)
+[log] Annealing max_lr
+Step 00010: loss -0.0861 lr 5.00E-03 eps 0.031 (time 0.4418)
+[log] early stopping at iteration 12
+clipimage succImages: 4  totalImages: 5
+attacking image index : 5
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 1.3582)
+[log] Annealing max_lr
+Step 00010: loss -0.0003 lr 5.00E-03 eps 0.031 (time 0.4425)
+[log] Annealing max_lr
+[log] early stopping at iteration 19
+clipimage succImages: 5  totalImages: 6
+attacking image index : 6
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0013 lr 1.00E-02 eps 0.031 (time 1.2334)
+[log] Annealing max_lr
+Step 00010: loss -0.0036 lr 5.00E-03 eps 0.031 (time 0.4340)
+[log] Annealing max_lr
+Step 00020: loss -0.0123 lr 2.50E-03 eps 0.031 (time 0.4259)
+Step 00030: loss -0.0223 lr 2.50E-03 eps 0.031 (time 0.4231)
+Step 00040: loss -0.0514 lr 2.50E-03 eps 0.031 (time 0.4460)
+[log] Annealing max_lr
+Step 00050: loss -0.0818 lr 1.25E-03 eps 0.031 (time 0.4138)
+[log] Annealing max_lr
+Step 00060: loss -0.0959 lr 6.25E-04 eps 0.031 (time 0.4289)
+Step 00070: loss -0.1029 lr 6.25E-04 eps 0.031 (time 0.4449)
+Step 00080: loss -0.1097 lr 6.25E-04 eps 0.031 (time 0.4333)
+[log] Annealing max_lr
+Step 00090: loss -0.1159 lr 3.13E-04 eps 0.031 (time 0.4726)
+Step 00100: loss -0.1186 lr 3.13E-04 eps 0.031 (time 0.4436)
+[log] Annealing max_lr
+Step 00110: loss -0.1200 lr 1.56E-04 eps 0.031 (time 0.4421)
+Step 00120: loss -0.1214 lr 1.56E-04 eps 0.031 (time 0.4500)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00130: loss -0.1214 lr 5.00E-05 eps 0.031 (time 0.4398)
+Step 00140: loss -0.1219 lr 5.00E-05 eps 0.031 (time 0.4268)
+Step 00150: loss -0.1217 lr 5.00E-05 eps 0.031 (time 0.4657)
+Step 00160: loss -0.1219 lr 5.00E-05 eps 0.031 (time 0.4365)
+Step 00170: loss -0.1220 lr 5.00E-05 eps 0.031 (time 0.4444)
+Step 00180: loss -0.1223 lr 5.00E-05 eps 0.031 (time 0.4606)
+Step 00190: loss -0.1223 lr 5.00E-05 eps 0.031 (time 0.4604)
+Step 00200: loss -0.1224 lr 5.00E-05 eps 0.031 (time 0.4394)
+Step 00210: loss -0.1225 lr 5.00E-05 eps 0.031 (time 0.4449)
+Step 00220: loss -0.1227 lr 5.00E-05 eps 0.031 (time 0.4424)
+Step 00230: loss -0.1225 lr 5.00E-05 eps 0.031 (time 0.4434)
+Step 00240: loss -0.1230 lr 5.00E-05 eps 0.031 (time 0.4384)
+Step 00250: loss -0.1229 lr 5.00E-05 eps 0.031 (time 0.4409)
+Step 00260: loss -0.1229 lr 5.00E-05 eps 0.031 (time 0.4576)
+Step 00270: loss -0.1229 lr 5.00E-05 eps 0.031 (time 0.4426)
+Step 00280: loss -0.1229 lr 5.00E-05 eps 0.031 (time 0.4245)
+Step 00290: loss -0.1234 lr 5.00E-05 eps 0.031 (time 0.4368)
+Step 00300: loss -0.1238 lr 5.00E-05 eps 0.031 (time 0.4272)
+Step 00310: loss -0.1243 lr 5.00E-05 eps 0.031 (time 0.4414)
+Step 00320: loss -0.1245 lr 5.00E-05 eps 0.031 (time 0.4492)
+Step 00330: loss -0.1245 lr 5.00E-05 eps 0.031 (time 0.4872)
+Step 00340: loss -0.1246 lr 5.00E-05 eps 0.031 (time 0.4571)
+Step 00350: loss -0.1247 lr 5.00E-05 eps 0.031 (time 0.4290)
+Step 00360: loss -0.1247 lr 5.00E-05 eps 0.031 (time 0.4472)
+Step 00370: loss -0.1249 lr 5.00E-05 eps 0.031 (time 0.4316)
+Step 00380: loss -0.1249 lr 5.00E-05 eps 0.031 (time 0.4398)
+Step 00390: loss -0.1247 lr 5.00E-05 eps 0.031 (time 0.4597)
+Step 00400: loss -0.1249 lr 5.00E-05 eps 0.031 (time 0.4411)
+Step 00410: loss -0.1252 lr 5.00E-05 eps 0.031 (time 0.4416)
+Step 00420: loss -0.1251 lr 5.00E-05 eps 0.031 (time 0.4416)
+Step 00430: loss -0.1250 lr 5.00E-05 eps 0.031 (time 0.4745)
+Step 00440: loss -0.1250 lr 5.00E-05 eps 0.031 (time 0.4575)
+Step 00450: loss -0.1251 lr 5.00E-05 eps 0.031 (time 0.4577)
+Step 00460: loss -0.1252 lr 5.00E-05 eps 0.031 (time 0.4623)
+Step 00470: loss -0.1254 lr 5.00E-05 eps 0.031 (time 0.4595)
+Step 00480: loss -0.1252 lr 5.00E-05 eps 0.031 (time 0.4304)
+Step 00490: loss -0.1251 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00500: loss -0.1249 lr 5.00E-05 eps 0.031 (time 0.4624)
+Step 00510: loss -0.1252 lr 5.00E-05 eps 0.031 (time 0.4276)
+Step 00520: loss -0.1254 lr 5.00E-05 eps 0.031 (time 0.4289)
+Step 00530: loss -0.1253 lr 5.00E-05 eps 0.031 (time 0.4444)
+Step 00540: loss -0.1251 lr 5.00E-05 eps 0.031 (time 0.4460)
+Step 00550: loss -0.1253 lr 5.00E-05 eps 0.031 (time 0.4442)
+Step 00560: loss -0.1251 lr 5.00E-05 eps 0.031 (time 0.4256)
+Step 00570: loss -0.1253 lr 5.00E-05 eps 0.031 (time 0.4206)
+Step 00580: loss -0.1254 lr 5.00E-05 eps 0.031 (time 0.4471)
+Step 00590: loss -0.1252 lr 5.00E-05 eps 0.031 (time 0.4688)
+clipimage succImages: 5  totalImages: 7
+attacking image index : 7
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0342 lr 1.00E-02 eps 0.031 (time 1.1287)
+[log] early stopping at iteration 5
+clipimage succImages: 6  totalImages: 8
+attacking image index : 8
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0034 lr 1.00E-02 eps 0.031 (time 1.3642)
+[log] Annealing max_lr
+Step 00010: loss -0.4225 lr 5.00E-03 eps 0.031 (time 0.4448)
+[log] early stopping at iteration 11
+clipimage succImages: 7  totalImages: 9
+attacking image index : 9
+chose pseudorandom target class: 5
+Called
+restored
+skip the wrong example  9
+clipimage succImages: 7  totalImages: 9
+attacking image index : 10
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0014 lr 1.00E-02 eps 0.031 (time 1.3179)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00010: loss -0.0094 lr 2.50E-03 eps 0.031 (time 0.4161)
+Step 00020: loss -0.3712 lr 2.50E-03 eps 0.031 (time 0.4285)
+[log] early stopping at iteration 26
+clipimage succImages: 8  totalImages: 10
+attacking image index : 11
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 1.5461)
+[log] Annealing max_lr
+Step 00010: loss -0.0004 lr 5.00E-03 eps 0.031 (time 0.4245)
+[log] Annealing max_lr
+Step 00020: loss -0.0008 lr 2.50E-03 eps 0.031 (time 0.4385)
+[log] Annealing max_lr
+Step 00030: loss -0.0011 lr 1.25E-03 eps 0.031 (time 0.4442)
+Step 00040: loss -0.0013 lr 1.25E-03 eps 0.031 (time 0.4289)
+Step 00050: loss -0.0014 lr 1.25E-03 eps 0.031 (time 0.4481)
+[log] Annealing max_lr
+Step 00060: loss -0.0015 lr 6.25E-04 eps 0.031 (time 0.4254)
+Step 00070: loss -0.0016 lr 6.25E-04 eps 0.031 (time 0.4548)
+Step 00080: loss -0.0017 lr 6.25E-04 eps 0.031 (time 0.4648)
+Step 00090: loss -0.0017 lr 6.25E-04 eps 0.031 (time 0.4315)
+Step 00100: loss -0.0017 lr 6.25E-04 eps 0.031 (time 0.4253)
+Step 00110: loss -0.0018 lr 6.25E-04 eps 0.031 (time 0.4304)
+[log] Annealing max_lr
+Step 00120: loss -0.0018 lr 3.13E-04 eps 0.031 (time 0.4564)
+Step 00130: loss -0.0018 lr 3.13E-04 eps 0.031 (time 0.4596)
+Step 00140: loss -0.0019 lr 3.13E-04 eps 0.031 (time 0.4205)
+[log] Annealing max_lr
+Step 00150: loss -0.0019 lr 1.56E-04 eps 0.031 (time 0.4355)
+Step 00160: loss -0.0019 lr 1.56E-04 eps 0.031 (time 0.4231)
+Step 00170: loss -0.0019 lr 1.56E-04 eps 0.031 (time 0.4524)
+[log] Annealing max_lr
+Step 00180: loss -0.0019 lr 7.81E-05 eps 0.031 (time 0.4360)
+[log] Annealing max_lr
+Step 00190: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4449)
+Step 00200: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4221)
+Step 00210: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4557)
+Step 00220: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4454)
+Step 00230: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4239)
+Step 00240: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4422)
+Step 00250: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4403)
+Step 00260: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4386)
+Step 00270: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4438)
+Step 00280: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4371)
+Step 00290: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4411)
+Step 00300: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4515)
+Step 00310: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4240)
+Step 00320: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4674)
+Step 00330: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4403)
+Step 00340: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4452)
+Step 00350: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4378)
+Step 00360: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4645)
+Step 00370: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4275)
+Step 00380: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4339)
+Step 00390: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4308)
+Step 00400: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4297)
+Step 00410: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4256)
+Step 00420: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4206)
+Step 00430: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00440: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4737)
+Step 00450: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4387)
+Step 00460: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4446)
+Step 00470: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4607)
+Step 00480: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4572)
+Step 00490: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4552)
+Step 00500: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4158)
+Step 00510: loss -0.0019 lr 5.00E-05 eps 0.031 (time 0.4618)
+Step 00520: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4128)
+Step 00530: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4633)
+Step 00540: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4276)
+Step 00550: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4180)
+Step 00560: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4407)
+Step 00570: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4361)
+Step 00580: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4490)
+Step 00590: loss -0.0020 lr 5.00E-05 eps 0.031 (time 0.4402)
+clipimage succImages: 8  totalImages: 11
+attacking image index : 12
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.4992 lr 1.00E-02 eps 0.031 (time 1.5577)
+[log] early stopping at iteration 4
+clipimage succImages: 9  totalImages: 12
+attacking image index : 13
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 1.7727)
+[log] Annealing max_lr
+Step 00010: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4185)
+[log] Annealing max_lr
+Step 00020: loss -0.0001 lr 2.50E-03 eps 0.031 (time 0.4326)
+Step 00030: loss -0.0001 lr 2.50E-03 eps 0.031 (time 0.4432)
+[log] Annealing max_lr
+Step 00040: loss -0.0001 lr 1.25E-03 eps 0.031 (time 0.4209)
+Step 00050: loss -0.0001 lr 1.25E-03 eps 0.031 (time 0.4276)
+[log] Annealing max_lr
+Step 00060: loss -0.0001 lr 6.25E-04 eps 0.031 (time 0.4265)
+Step 00070: loss -0.0001 lr 6.25E-04 eps 0.031 (time 0.4429)
+Step 00080: loss -0.0001 lr 6.25E-04 eps 0.031 (time 0.4283)
+[log] Annealing max_lr
+Step 00090: loss -0.0001 lr 3.13E-04 eps 0.031 (time 0.4532)
+Step 00100: loss -0.0001 lr 3.13E-04 eps 0.031 (time 0.4281)
+Step 00110: loss -0.0001 lr 3.13E-04 eps 0.031 (time 0.4440)
+Step 00120: loss -0.0001 lr 3.13E-04 eps 0.031 (time 0.4538)
+[log] Annealing max_lr
+Step 00130: loss -0.0001 lr 1.56E-04 eps 0.031 (time 0.4314)
+Step 00140: loss -0.0001 lr 1.56E-04 eps 0.031 (time 0.4328)
+Step 00150: loss -0.0001 lr 1.56E-04 eps 0.031 (time 0.4525)
+[log] Annealing max_lr
+Step 00160: loss -0.0001 lr 7.81E-05 eps 0.031 (time 0.4410)
+[log] Annealing max_lr
+Step 00170: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4592)
+Step 00180: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4379)
+Step 00190: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4609)
+Step 00200: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4533)
+Step 00210: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4337)
+Step 00220: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4214)
+Step 00230: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4686)
+Step 00240: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4163)
+Step 00250: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4749)
+Step 00260: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4232)
+Step 00270: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4309)
+Step 00280: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4425)
+Step 00290: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4373)
+Step 00300: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4408)
+Step 00310: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4545)
+Step 00320: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4626)
+Step 00330: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4582)
+Step 00340: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4405)
+Step 00350: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4601)
+Step 00360: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00370: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4387)
+Step 00380: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4279)
+Step 00390: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4221)
+Step 00400: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4471)
+Step 00410: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4441)
+Step 00420: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4477)
+Step 00430: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4231)
+Step 00440: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4578)
+Step 00450: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4356)
+Step 00460: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4394)
+Step 00470: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.5095)
+Step 00480: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4911)
+Step 00490: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4480)
+Step 00500: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4344)
+Step 00510: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4566)
+Step 00520: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4171)
+Step 00530: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4417)
+Step 00540: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4336)
+Step 00550: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4497)
+Step 00560: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4284)
+Step 00570: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4327)
+Step 00580: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4373)
+Step 00590: loss -0.0001 lr 5.00E-05 eps 0.031 (time 0.4314)
+clipimage succImages: 9  totalImages: 13
+attacking image index : 14
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 1.8699)
+[log] Annealing max_lr
+Step 00010: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4322)
+[log] Annealing max_lr
+Step 00020: loss -0.0002 lr 2.50E-03 eps 0.031 (time 0.4209)
+[log] Annealing max_lr
+Step 00030: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4228)
+Step 00040: loss -0.0005 lr 1.25E-03 eps 0.031 (time 0.4244)
+Step 00050: loss -0.0007 lr 1.25E-03 eps 0.031 (time 0.4241)
+Step 00060: loss -0.0010 lr 1.25E-03 eps 0.031 (time 0.4417)
+[log] Annealing max_lr
+Step 00070: loss -0.0012 lr 6.25E-04 eps 0.031 (time 0.4485)
+Step 00080: loss -0.0017 lr 6.25E-04 eps 0.031 (time 0.4161)
+Step 00090: loss -0.0019 lr 6.25E-04 eps 0.031 (time 0.4441)
+Step 00100: loss -0.0020 lr 6.25E-04 eps 0.031 (time 0.4356)
+Step 00110: loss -0.0022 lr 6.25E-04 eps 0.031 (time 0.4295)
+[log] Annealing max_lr
+Step 00120: loss -0.0022 lr 3.13E-04 eps 0.031 (time 0.4182)
+[log] Annealing max_lr
+Step 00130: loss -0.0023 lr 1.56E-04 eps 0.031 (time 0.4385)
+Step 00140: loss -0.0023 lr 1.56E-04 eps 0.031 (time 0.4080)
+Step 00150: loss -0.0024 lr 1.56E-04 eps 0.031 (time 0.4264)
+[log] Annealing max_lr
+Step 00160: loss -0.0024 lr 7.81E-05 eps 0.031 (time 0.4626)
+[log] Annealing max_lr
+Step 00170: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4503)
+Step 00180: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4349)
+Step 00190: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4377)
+Step 00200: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4146)
+Step 00210: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4492)
+Step 00220: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4427)
+Step 00230: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4310)
+Step 00240: loss -0.0024 lr 5.00E-05 eps 0.031 (time 0.4161)
+Step 00250: loss -0.0025 lr 5.00E-05 eps 0.031 (time 0.4517)
+Step 00260: loss -0.0025 lr 5.00E-05 eps 0.031 (time 0.4069)
+Step 00270: loss -0.0025 lr 5.00E-05 eps 0.031 (time 0.4204)
+Step 00280: loss -0.0025 lr 5.00E-05 eps 0.031 (time 0.4165)
+Step 00290: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4409)
+Step 00300: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4357)
+Step 00310: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4379)
+Step 00320: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4519)
+Step 00330: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4191)
+Step 00340: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4397)
+Step 00350: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4325)
+Step 00360: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4533)
+Step 00370: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4146)
+Step 00380: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4326)
+Step 00390: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4201)
+Step 00400: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4169)
+Step 00410: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4393)
+Step 00420: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4124)
+Step 00430: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4280)
+Step 00440: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4356)
+Step 00450: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4130)
+Step 00460: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4574)
+Step 00470: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4339)
+Step 00480: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4503)
+Step 00490: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00500: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4297)
+Step 00510: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4332)
+Step 00520: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4423)
+Step 00530: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4447)
+Step 00540: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4393)
+Step 00550: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4800)
+Step 00560: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4590)
+Step 00570: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4602)
+Step 00580: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4759)
+Step 00590: loss -0.0026 lr 5.00E-05 eps 0.031 (time 0.4261)
+clipimage succImages: 9  totalImages: 14
+attacking image index : 15
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 1.7214)
+[log] Annealing max_lr
+Step 00010: loss -0.0003 lr 5.00E-03 eps 0.031 (time 0.4165)
+[log] Annealing max_lr
+Step 00020: loss -0.0155 lr 2.50E-03 eps 0.031 (time 0.4302)
+[log] Annealing max_lr
+[log] early stopping at iteration 28
+clipimage succImages: 10  totalImages: 15
+attacking image index : 16
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 1.7833)
+[log] Annealing max_lr
+Step 00010: loss -0.0002 lr 5.00E-03 eps 0.031 (time 0.4684)
+Step 00020: loss -0.0005 lr 5.00E-03 eps 0.031 (time 0.4283)
+[log] Annealing max_lr
+Step 00030: loss -0.0005 lr 2.50E-03 eps 0.031 (time 0.4202)
+Step 00040: loss -0.0022 lr 2.50E-03 eps 0.031 (time 0.4333)
+[log] Annealing max_lr
+Step 00050: loss -0.0028 lr 1.25E-03 eps 0.031 (time 0.4211)
+Step 00060: loss -0.0092 lr 1.25E-03 eps 0.031 (time 0.4413)
+[log] Annealing max_lr
+Step 00070: loss -0.0128 lr 6.25E-04 eps 0.031 (time 0.4328)
+Step 00080: loss -0.0164 lr 6.25E-04 eps 0.031 (time 0.4596)
+Step 00090: loss -0.0182 lr 6.25E-04 eps 0.031 (time 0.4390)
+Step 00100: loss -0.0232 lr 6.25E-04 eps 0.031 (time 0.4453)
+Step 00110: loss -0.0262 lr 6.25E-04 eps 0.031 (time 0.4428)
+[log] Annealing max_lr
+Step 00120: loss -0.0274 lr 3.13E-04 eps 0.031 (time 0.4380)
+Step 00130: loss -0.0295 lr 3.13E-04 eps 0.031 (time 0.4406)
+Step 00140: loss -0.0307 lr 3.13E-04 eps 0.031 (time 0.4303)
+[log] Annealing max_lr
+Step 00150: loss -0.0311 lr 1.56E-04 eps 0.031 (time 0.4363)
+[log] Annealing max_lr
+Step 00160: loss -0.0323 lr 7.81E-05 eps 0.031 (time 0.4379)
+[log] Annealing max_lr
+Step 00170: loss -0.0324 lr 5.00E-05 eps 0.031 (time 0.4411)
+Step 00180: loss -0.0323 lr 5.00E-05 eps 0.031 (time 0.4469)
+Step 00190: loss -0.0327 lr 5.00E-05 eps 0.031 (time 0.4143)
+Step 00200: loss -0.0325 lr 5.00E-05 eps 0.031 (time 0.4360)
+Step 00210: loss -0.0329 lr 5.00E-05 eps 0.031 (time 0.4408)
+Step 00220: loss -0.0331 lr 5.00E-05 eps 0.031 (time 0.4499)
+Step 00230: loss -0.0329 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00240: loss -0.0329 lr 5.00E-05 eps 0.031 (time 0.4366)
+Step 00250: loss -0.0329 lr 5.00E-05 eps 0.031 (time 0.4506)
+Step 00260: loss -0.0334 lr 5.00E-05 eps 0.031 (time 0.4519)
+Step 00270: loss -0.0332 lr 5.00E-05 eps 0.031 (time 0.4217)
+Step 00280: loss -0.0330 lr 5.00E-05 eps 0.031 (time 0.4481)
+Step 00290: loss -0.0334 lr 5.00E-05 eps 0.031 (time 0.4535)
+Step 00300: loss -0.0336 lr 5.00E-05 eps 0.031 (time 0.4678)
+Step 00310: loss -0.0337 lr 5.00E-05 eps 0.031 (time 0.4168)
+Step 00320: loss -0.0332 lr 5.00E-05 eps 0.031 (time 0.4357)
+Step 00330: loss -0.0334 lr 5.00E-05 eps 0.031 (time 0.4528)
+Step 00340: loss -0.0335 lr 5.00E-05 eps 0.031 (time 0.4534)
+Step 00350: loss -0.0340 lr 5.00E-05 eps 0.031 (time 0.4269)
+Step 00360: loss -0.0338 lr 5.00E-05 eps 0.031 (time 0.4689)
+Step 00370: loss -0.0337 lr 5.00E-05 eps 0.031 (time 0.4342)
+Step 00380: loss -0.0341 lr 5.00E-05 eps 0.031 (time 0.4715)
+Step 00390: loss -0.0344 lr 5.00E-05 eps 0.031 (time 0.4359)
+Step 00400: loss -0.0341 lr 5.00E-05 eps 0.031 (time 0.4276)
+Step 00410: loss -0.0340 lr 5.00E-05 eps 0.031 (time 0.4352)
+Step 00420: loss -0.0343 lr 5.00E-05 eps 0.031 (time 0.4361)
+Step 00430: loss -0.0342 lr 5.00E-05 eps 0.031 (time 0.4401)
+Step 00440: loss -0.0341 lr 5.00E-05 eps 0.031 (time 0.4597)
+Step 00450: loss -0.0340 lr 5.00E-05 eps 0.031 (time 0.4450)
+Step 00460: loss -0.0343 lr 5.00E-05 eps 0.031 (time 0.4392)
+Step 00470: loss -0.0342 lr 5.00E-05 eps 0.031 (time 0.4250)
+Step 00480: loss -0.0343 lr 5.00E-05 eps 0.031 (time 0.4388)
+Step 00490: loss -0.0341 lr 5.00E-05 eps 0.031 (time 0.4580)
+Step 00500: loss -0.0347 lr 5.00E-05 eps 0.031 (time 0.4321)
+Step 00510: loss -0.0346 lr 5.00E-05 eps 0.031 (time 0.4373)
+Step 00520: loss -0.0344 lr 5.00E-05 eps 0.031 (time 0.4443)
+Step 00530: loss -0.0346 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00540: loss -0.0346 lr 5.00E-05 eps 0.031 (time 0.4375)
+Step 00550: loss -0.0350 lr 5.00E-05 eps 0.031 (time 0.4642)
+Step 00560: loss -0.0349 lr 5.00E-05 eps 0.031 (time 0.4727)
+Step 00570: loss -0.0346 lr 5.00E-05 eps 0.031 (time 0.4134)
+Step 00580: loss -0.0350 lr 5.00E-05 eps 0.031 (time 0.4331)
+Step 00590: loss -0.0350 lr 5.00E-05 eps 0.031 (time 0.4211)
+clipimage succImages: 10  totalImages: 16
+attacking image index : 17
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0008 lr 1.00E-02 eps 0.031 (time 2.0857)
+Step 00010: loss -0.0018 lr 1.00E-02 eps 0.031 (time 0.4309)
+[log] Annealing max_lr
+Step 00020: loss -0.0073 lr 5.00E-03 eps 0.031 (time 0.4338)
+[log] Annealing max_lr
+Step 00030: loss -0.0401 lr 2.50E-03 eps 0.031 (time 0.4205)
+[log] Annealing max_lr
+Step 00040: loss -0.3205 lr 1.25E-03 eps 0.031 (time 0.4136)
+[log] early stopping at iteration 46
+clipimage succImages: 11  totalImages: 17
+attacking image index : 18
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0043 lr 1.00E-02 eps 0.031 (time 2.3768)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00010: loss -0.0260 lr 2.50E-03 eps 0.031 (time 0.4333)
+[log] early stopping at iteration 13
+clipimage succImages: 12  totalImages: 18
+attacking image index : 19
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0004 lr 1.00E-02 eps 0.031 (time 2.1651)
+[log] Annealing max_lr
+Step 00010: loss -0.0026 lr 5.00E-03 eps 0.031 (time 0.4332)
+[log] Annealing max_lr
+Step 00020: loss -0.0714 lr 2.50E-03 eps 0.031 (time 0.4209)
+[log] early stopping at iteration 29
+clipimage succImages: 13  totalImages: 19
+attacking image index : 20
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0006 lr 1.00E-02 eps 0.031 (time 2.2037)
+[log] Annealing max_lr
+Step 00010: loss -0.0049 lr 5.00E-03 eps 0.031 (time 0.4078)
+[log] Annealing max_lr
+Step 00020: loss -0.1085 lr 2.50E-03 eps 0.031 (time 0.4533)
+Step 00030: loss -0.5149 lr 2.50E-03 eps 0.031 (time 0.4413)
+[log] early stopping at iteration 36
+clipimage succImages: 14  totalImages: 20
+attacking image index : 21
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0003 lr 1.00E-02 eps 0.031 (time 2.7224)
+Step 00010: loss -0.0004 lr 1.00E-02 eps 0.031 (time 0.4116)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.0004 lr 2.50E-03 eps 0.031 (time 0.4135)
+Step 00030: loss -0.0004 lr 2.50E-03 eps 0.031 (time 0.4245)
+[log] Annealing max_lr
+Step 00040: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4416)
+Step 00050: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4198)
+[log] Annealing max_lr
+Step 00060: loss -0.0005 lr 6.25E-04 eps 0.031 (time 0.4466)
+[log] Annealing max_lr
+Step 00070: loss -0.0005 lr 3.13E-04 eps 0.031 (time 0.4126)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00080: loss -0.0005 lr 7.81E-05 eps 0.031 (time 0.4234)
+[log] Annealing max_lr
+Step 00090: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4358)
+Step 00100: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4367)
+Step 00110: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4088)
+Step 00120: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4434)
+Step 00130: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4422)
+Step 00140: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4375)
+Step 00150: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4433)
+Step 00160: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4284)
+Step 00170: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4258)
+Step 00180: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4162)
+Step 00190: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4279)
+Step 00200: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4161)
+Step 00210: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4150)
+Step 00220: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4576)
+Step 00230: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4321)
+Step 00240: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4452)
+Step 00250: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4193)
+Step 00260: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4440)
+Step 00270: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4370)
+Step 00280: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4307)
+Step 00290: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4293)
+Step 00300: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4456)
+Step 00310: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4163)
+Step 00320: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4517)
+Step 00330: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4328)
+Step 00340: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4121)
+Step 00350: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4247)
+Step 00360: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4207)
+Step 00370: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4472)
+Step 00380: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4478)
+Step 00390: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4299)
+Step 00400: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4239)
+Step 00410: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4370)
+Step 00420: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4294)
+Step 00430: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4329)
+Step 00440: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4623)
+Step 00450: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4261)
+Step 00460: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4399)
+Step 00470: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4205)
+Step 00480: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4511)
+Step 00490: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4289)
+Step 00500: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4201)
+Step 00510: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4468)
+Step 00520: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4127)
+Step 00530: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4527)
+Step 00540: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4307)
+Step 00550: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4452)
+Step 00560: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4299)
+Step 00570: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4319)
+Step 00580: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4210)
+Step 00590: loss -0.0005 lr 5.00E-05 eps 0.031 (time 0.4380)
+clipimage succImages: 14  totalImages: 21
+attacking image index : 22
+chose pseudorandom target class: 5
+Called
+restored
+skip the wrong example  22
+clipimage succImages: 14  totalImages: 21
+attacking image index : 23
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0004 lr 1.00E-02 eps 0.031 (time 2.3083)
+[log] Annealing max_lr
+Step 00010: loss -0.0007 lr 5.00E-03 eps 0.031 (time 0.4651)
+[log] Annealing max_lr
+Step 00020: loss -0.0010 lr 2.50E-03 eps 0.031 (time 0.4115)
+Step 00030: loss -0.0012 lr 2.50E-03 eps 0.031 (time 0.4104)
+[log] Annealing max_lr
+Step 00040: loss -0.0017 lr 1.25E-03 eps 0.031 (time 0.4218)
+Step 00050: loss -0.0020 lr 1.25E-03 eps 0.031 (time 0.4278)
+Step 00060: loss -0.0022 lr 1.25E-03 eps 0.031 (time 0.4455)
+[log] Annealing max_lr
+Step 00070: loss -0.0023 lr 6.25E-04 eps 0.031 (time 0.4209)
+Step 00080: loss -0.0024 lr 6.25E-04 eps 0.031 (time 0.4138)
+Step 00090: loss -0.0025 lr 6.25E-04 eps 0.031 (time 0.4324)
+Step 00100: loss -0.0025 lr 6.25E-04 eps 0.031 (time 0.4170)
+[log] Annealing max_lr
+Step 00110: loss -0.0026 lr 3.13E-04 eps 0.031 (time 0.4279)
+Step 00120: loss -0.0026 lr 3.13E-04 eps 0.031 (time 0.4290)
+Step 00130: loss -0.0026 lr 3.13E-04 eps 0.031 (time 0.4288)
+Step 00140: loss -0.0026 lr 3.13E-04 eps 0.031 (time 0.4461)
+[log] Annealing max_lr
+Step 00150: loss -0.0026 lr 1.56E-04 eps 0.031 (time 0.4097)
+Step 00160: loss -0.0027 lr 1.56E-04 eps 0.031 (time 0.4634)
+Step 00170: loss -0.0027 lr 1.56E-04 eps 0.031 (time 0.4441)
+[log] Annealing max_lr
+Step 00180: loss -0.0027 lr 7.81E-05 eps 0.031 (time 0.4503)
+[log] Annealing max_lr
+Step 00190: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4503)
+Step 00200: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4408)
+Step 00210: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4174)
+Step 00220: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4505)
+Step 00230: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4259)
+Step 00240: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4159)
+Step 00250: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4439)
+Step 00260: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4324)
+Step 00270: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4364)
+Step 00280: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4246)
+Step 00290: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4344)
+Step 00300: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4120)
+Step 00310: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4386)
+Step 00320: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4132)
+Step 00330: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4100)
+Step 00340: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4300)
+Step 00350: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4496)
+Step 00360: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4183)
+Step 00370: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4146)
+Step 00380: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4374)
+Step 00390: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4289)
+Step 00400: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4606)
+Step 00410: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4523)
+Step 00420: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4386)
+Step 00430: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4174)
+Step 00440: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4152)
+Step 00450: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4256)
+Step 00460: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4304)
+Step 00470: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4113)
+Step 00480: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4217)
+Step 00490: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4606)
+Step 00500: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4300)
+Step 00510: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4327)
+Step 00520: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4205)
+Step 00530: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4408)
+Step 00540: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4414)
+Step 00550: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4439)
+Step 00560: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4383)
+Step 00570: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4350)
+Step 00580: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4176)
+Step 00590: loss -0.0027 lr 5.00E-05 eps 0.031 (time 0.4283)
+clipimage succImages: 14  totalImages: 22
+attacking image index : 24
+chose pseudorandom target class: 2
+Called
+restored
+skip the wrong example  24
+clipimage succImages: 14  totalImages: 22
+attacking image index : 25
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 2.6240)
+[log] Annealing max_lr
+Step 00010: loss -0.0007 lr 5.00E-03 eps 0.031 (time 0.4042)
+[log] Annealing max_lr
+Step 00020: loss -0.0050 lr 2.50E-03 eps 0.031 (time 0.4149)
+[log] Annealing max_lr
+Step 00030: loss -0.0988 lr 1.25E-03 eps 0.031 (time 0.4127)
+Step 00040: loss -0.2229 lr 1.25E-03 eps 0.031 (time 0.4522)
+Step 00050: loss -0.4529 lr 1.25E-03 eps 0.031 (time 0.4057)
+[log] Annealing max_lr
+[log] early stopping at iteration 55
+clipimage succImages: 15  totalImages: 23
+attacking image index : 26
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0347 lr 1.00E-02 eps 0.031 (time 2.5208)
+[log] Annealing max_lr
+[log] early stopping at iteration 6
+clipimage succImages: 16  totalImages: 24
+attacking image index : 27
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 2.9533)
+Step 00010: loss -0.0253 lr 1.00E-02 eps 0.031 (time 0.4390)
+[log] Annealing max_lr
+[log] early stopping at iteration 19
+clipimage succImages: 17  totalImages: 25
+attacking image index : 28
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0040 lr 1.00E-02 eps 0.031 (time 3.0295)
+Step 00010: loss -0.0258 lr 1.00E-02 eps 0.031 (time 0.4252)
+[log] Annealing max_lr
+Step 00020: loss -0.0408 lr 5.00E-03 eps 0.031 (time 0.4306)
+[log] Annealing max_lr
+[log] early stopping at iteration 30
+clipimage succImages: 18  totalImages: 26
+attacking image index : 29
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 2.9471)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4340)
+[log] Annealing max_lr
+Step 00020: loss -0.0000 lr 2.50E-03 eps 0.031 (time 0.4427)
+Step 00030: loss -0.0000 lr 2.50E-03 eps 0.031 (time 0.4281)
+[log] Annealing max_lr
+Step 00040: loss -0.0000 lr 1.25E-03 eps 0.031 (time 0.4295)
+Step 00050: loss -0.0000 lr 1.25E-03 eps 0.031 (time 0.4236)
+Step 00060: loss -0.0000 lr 1.25E-03 eps 0.031 (time 0.4154)
+[log] Annealing max_lr
+Step 00070: loss -0.0000 lr 6.25E-04 eps 0.031 (time 0.4275)
+Step 00080: loss -0.0000 lr 6.25E-04 eps 0.031 (time 0.4370)
+[log] Annealing max_lr
+Step 00090: loss -0.0000 lr 3.13E-04 eps 0.031 (time 0.4296)
+[log] Annealing max_lr
+Step 00100: loss -0.0000 lr 1.56E-04 eps 0.031 (time 0.4289)
+Step 00110: loss -0.0000 lr 1.56E-04 eps 0.031 (time 0.4185)
+Step 00120: loss -0.0000 lr 1.56E-04 eps 0.031 (time 0.4361)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00130: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4237)
+Step 00140: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4333)
+Step 00150: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4528)
+Step 00160: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4129)
+Step 00170: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4223)
+Step 00180: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4145)
+Step 00190: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4309)
+Step 00200: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4449)
+Step 00210: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4478)
+Step 00220: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4256)
+Step 00230: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4401)
+Step 00240: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4383)
+Step 00250: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4390)
+Step 00260: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4043)
+Step 00270: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4311)
+Step 00280: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4256)
+Step 00290: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4623)
+Step 00300: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4164)
+Step 00310: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4262)
+Step 00320: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4337)
+Step 00330: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4411)
+Step 00340: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4385)
+Step 00350: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4362)
+Step 00360: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4322)
+Step 00370: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4388)
+Step 00380: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4180)
+Step 00390: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4499)
+Step 00400: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4662)
+Step 00410: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4264)
+Step 00420: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4161)
+Step 00430: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4161)
+Step 00440: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4604)
+Step 00450: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4414)
+Step 00460: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4487)
+Step 00470: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4531)
+Step 00480: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4427)
+Step 00490: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4671)
+Step 00500: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4283)
+Step 00510: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4316)
+Step 00520: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4465)
+Step 00530: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4241)
+Step 00540: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4457)
+Step 00550: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4222)
+Step 00560: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4539)
+Step 00570: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4250)
+Step 00580: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4173)
+Step 00590: loss -0.0000 lr 5.00E-05 eps 0.031 (time 0.4141)
+clipimage succImages: 18  totalImages: 27
+attacking image index : 30
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0029 lr 1.00E-02 eps 0.031 (time 3.2461)
+[log] Annealing max_lr
+Step 00010: loss -0.0313 lr 5.00E-03 eps 0.031 (time 0.4198)
+[log] Annealing max_lr
+Step 00020: loss -0.4047 lr 2.50E-03 eps 0.031 (time 0.4368)
+[log] early stopping at iteration 21
+clipimage succImages: 19  totalImages: 28
+attacking image index : 31
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 3.1641)
+[log] Annealing max_lr
+Step 00010: loss -0.0017 lr 5.00E-03 eps 0.031 (time 0.4355)
+[log] Annealing max_lr
+Step 00020: loss -0.2249 lr 2.50E-03 eps 0.031 (time 0.4225)
+[log] early stopping at iteration 22
+clipimage succImages: 20  totalImages: 29
+attacking image index : 32
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0410 lr 1.00E-02 eps 0.031 (time 3.3772)
+[log] early stopping at iteration 3
+clipimage succImages: 21  totalImages: 30
+attacking image index : 33
+chose pseudorandom target class: 4
+Called
+restored
+skip the wrong example  33
+clipimage succImages: 21  totalImages: 30
+attacking image index : 34
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0003 lr 1.00E-02 eps 0.031 (time 2.9936)
+[log] Annealing max_lr
+Step 00010: loss -0.0005 lr 5.00E-03 eps 0.031 (time 0.4176)
+[log] Annealing max_lr
+Step 00020: loss -0.0013 lr 2.50E-03 eps 0.031 (time 0.4096)
+[log] Annealing max_lr
+Step 00030: loss -0.0017 lr 1.25E-03 eps 0.031 (time 0.4263)
+Step 00040: loss -0.0025 lr 1.25E-03 eps 0.031 (time 0.4199)
+Step 00050: loss -0.0028 lr 1.25E-03 eps 0.031 (time 0.4205)
+Step 00060: loss -0.0032 lr 1.25E-03 eps 0.031 (time 0.4184)
+[log] Annealing max_lr
+Step 00070: loss -0.0038 lr 6.25E-04 eps 0.031 (time 0.4320)
+Step 00080: loss -0.0041 lr 6.25E-04 eps 0.031 (time 0.4294)
+[log] Annealing max_lr
+Step 00090: loss -0.0041 lr 3.13E-04 eps 0.031 (time 0.4286)
+Step 00100: loss -0.0042 lr 3.13E-04 eps 0.031 (time 0.4262)
+Step 00110: loss -0.0042 lr 3.13E-04 eps 0.031 (time 0.4210)
+Step 00120: loss -0.0042 lr 3.13E-04 eps 0.031 (time 0.4390)
+[log] Annealing max_lr
+Step 00130: loss -0.0043 lr 1.56E-04 eps 0.031 (time 0.4342)
+[log] Annealing max_lr
+Step 00140: loss -0.0043 lr 7.81E-05 eps 0.031 (time 0.4381)
+[log] Annealing max_lr
+Step 00150: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4325)
+Step 00160: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4244)
+Step 00170: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4282)
+Step 00180: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4469)
+Step 00190: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4418)
+Step 00200: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4112)
+Step 00210: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4572)
+Step 00220: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4305)
+Step 00230: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4134)
+Step 00240: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4561)
+Step 00250: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4350)
+Step 00260: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4183)
+Step 00270: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4398)
+Step 00280: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4298)
+Step 00290: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4257)
+Step 00300: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4186)
+Step 00310: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4264)
+Step 00320: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4344)
+Step 00330: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4410)
+Step 00340: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4162)
+Step 00350: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4404)
+Step 00360: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4477)
+Step 00370: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4117)
+Step 00380: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4358)
+Step 00390: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4177)
+Step 00400: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4346)
+Step 00410: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4141)
+Step 00420: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4550)
+Step 00430: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4285)
+Step 00440: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4334)
+Step 00450: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4206)
+Step 00460: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4481)
+Step 00470: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4136)
+Step 00480: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4350)
+Step 00490: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4189)
+Step 00500: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4525)
+Step 00510: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4466)
+Step 00520: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4163)
+Step 00530: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4327)
+Step 00540: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4387)
+Step 00550: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4391)
+Step 00560: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4108)
+Step 00570: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4636)
+Step 00580: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4149)
+Step 00590: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4431)
+clipimage succImages: 21  totalImages: 31
+attacking image index : 35
+chose pseudorandom target class: 9
+Called
+restored
+skip the wrong example  35
+clipimage succImages: 21  totalImages: 31
+attacking image index : 36
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0984 lr 1.00E-02 eps 0.031 (time 3.4581)
+[log] early stopping at iteration 4
+clipimage succImages: 22  totalImages: 32
+attacking image index : 37
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0031 lr 1.00E-02 eps 0.031 (time 3.6373)
+[log] Annealing max_lr
+Step 00010: loss -0.0317 lr 5.00E-03 eps 0.031 (time 0.4321)
+[log] Annealing max_lr
+Step 00020: loss -0.3344 lr 2.50E-03 eps 0.031 (time 0.4347)
+[log] early stopping at iteration 30
+clipimage succImages: 23  totalImages: 33
+attacking image index : 38
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 3.5916)
+Step 00010: loss -0.0003 lr 1.00E-02 eps 0.031 (time 0.4435)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.0004 lr 2.50E-03 eps 0.031 (time 0.4164)
+Step 00030: loss -0.0007 lr 2.50E-03 eps 0.031 (time 0.4576)
+[log] Annealing max_lr
+Step 00040: loss -0.0010 lr 1.25E-03 eps 0.031 (time 0.4254)
+Step 00050: loss -0.0014 lr 1.25E-03 eps 0.031 (time 0.4133)
+[log] Annealing max_lr
+Step 00060: loss -0.0016 lr 6.25E-04 eps 0.031 (time 0.4185)
+Step 00070: loss -0.0016 lr 6.25E-04 eps 0.031 (time 0.4163)
+Step 00080: loss -0.0017 lr 6.25E-04 eps 0.031 (time 0.4275)
+[log] Annealing max_lr
+Step 00090: loss -0.0017 lr 3.13E-04 eps 0.031 (time 0.4319)
+Step 00100: loss -0.0017 lr 3.13E-04 eps 0.031 (time 0.4160)
+Step 00110: loss -0.0017 lr 3.13E-04 eps 0.031 (time 0.4420)
+[log] Annealing max_lr
+Step 00120: loss -0.0017 lr 1.56E-04 eps 0.031 (time 0.4392)
+[log] Annealing max_lr
+Step 00130: loss -0.0017 lr 7.81E-05 eps 0.031 (time 0.4298)
+[log] Annealing max_lr
+Step 00140: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4228)
+Step 00150: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4203)
+Step 00160: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4453)
+Step 00170: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4147)
+Step 00180: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4145)
+Step 00190: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4166)
+Step 00200: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4153)
+Step 00210: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4241)
+Step 00220: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4405)
+Step 00230: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4280)
+Step 00240: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00250: loss -0.0017 lr 5.00E-05 eps 0.031 (time 0.4402)
+Step 00260: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4530)
+Step 00270: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4070)
+Step 00280: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4232)
+Step 00290: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4548)
+Step 00300: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4115)
+Step 00310: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4214)
+Step 00320: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4350)
+Step 00330: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4389)
+Step 00340: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4543)
+Step 00350: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4535)
+Step 00360: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00370: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4551)
+Step 00380: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4274)
+Step 00390: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4438)
+Step 00400: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4418)
+Step 00410: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4211)
+Step 00420: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4366)
+Step 00430: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4139)
+Step 00440: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4475)
+Step 00450: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4381)
+Step 00460: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4237)
+Step 00470: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4367)
+Step 00480: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4335)
+Step 00490: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4620)
+Step 00500: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4481)
+Step 00510: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4484)
+Step 00520: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4220)
+Step 00530: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4208)
+Step 00540: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4487)
+Step 00550: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4340)
+Step 00560: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4232)
+Step 00570: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4361)
+Step 00580: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4438)
+Step 00590: loss -0.0018 lr 5.00E-05 eps 0.031 (time 0.4454)
+clipimage succImages: 23  totalImages: 34
+attacking image index : 39
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 3.7431)
+Step 00010: loss -0.0002 lr 1.00E-02 eps 0.031 (time 0.4470)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.0009 lr 2.50E-03 eps 0.031 (time 0.4210)
+Step 00030: loss -0.0018 lr 2.50E-03 eps 0.031 (time 0.4299)
+[log] Annealing max_lr
+Step 00040: loss -0.0041 lr 1.25E-03 eps 0.031 (time 0.4267)
+Step 00050: loss -0.0063 lr 1.25E-03 eps 0.031 (time 0.4423)
+Step 00060: loss -0.0088 lr 1.25E-03 eps 0.031 (time 0.4258)
+Step 00070: loss -0.0108 lr 1.25E-03 eps 0.031 (time 0.4187)
+[log] Annealing max_lr
+Step 00080: loss -0.0137 lr 6.25E-04 eps 0.031 (time 0.4136)
+Step 00090: loss -0.0147 lr 6.25E-04 eps 0.031 (time 0.4166)
+Step 00100: loss -0.0161 lr 6.25E-04 eps 0.031 (time 0.4197)
+[log] Annealing max_lr
+Step 00110: loss -0.0174 lr 3.13E-04 eps 0.031 (time 0.4487)
+Step 00120: loss -0.0204 lr 3.13E-04 eps 0.031 (time 0.4317)
+Step 00130: loss -0.0237 lr 3.13E-04 eps 0.031 (time 0.4259)
+Step 00140: loss -0.0250 lr 3.13E-04 eps 0.031 (time 0.4196)
+Step 00150: loss -0.0263 lr 3.13E-04 eps 0.031 (time 0.4302)
+[log] Annealing max_lr
+Step 00160: loss -0.0274 lr 1.56E-04 eps 0.031 (time 0.4243)
+Step 00170: loss -0.0278 lr 1.56E-04 eps 0.031 (time 0.4479)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00180: loss -0.0280 lr 5.00E-05 eps 0.031 (time 0.4401)
+Step 00190: loss -0.0280 lr 5.00E-05 eps 0.031 (time 0.4649)
+Step 00200: loss -0.0281 lr 5.00E-05 eps 0.031 (time 0.4250)
+Step 00210: loss -0.0281 lr 5.00E-05 eps 0.031 (time 0.4404)
+Step 00220: loss -0.0283 lr 5.00E-05 eps 0.031 (time 0.4184)
+Step 00230: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4533)
+Step 00240: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4167)
+Step 00250: loss -0.0286 lr 5.00E-05 eps 0.031 (time 0.4373)
+Step 00260: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4336)
+Step 00270: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4295)
+Step 00280: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4254)
+Step 00290: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4199)
+Step 00300: loss -0.0287 lr 5.00E-05 eps 0.031 (time 0.4484)
+Step 00310: loss -0.0287 lr 5.00E-05 eps 0.031 (time 0.4196)
+Step 00320: loss -0.0287 lr 5.00E-05 eps 0.031 (time 0.4342)
+Step 00330: loss -0.0287 lr 5.00E-05 eps 0.031 (time 0.4200)
+Step 00340: loss -0.0286 lr 5.00E-05 eps 0.031 (time 0.4190)
+Step 00350: loss -0.0288 lr 5.00E-05 eps 0.031 (time 0.4155)
+Step 00360: loss -0.0288 lr 5.00E-05 eps 0.031 (time 0.4458)
+Step 00370: loss -0.0289 lr 5.00E-05 eps 0.031 (time 0.4262)
+Step 00380: loss -0.0290 lr 5.00E-05 eps 0.031 (time 0.4446)
+Step 00390: loss -0.0290 lr 5.00E-05 eps 0.031 (time 0.4519)
+Step 00400: loss -0.0291 lr 5.00E-05 eps 0.031 (time 0.4432)
+Step 00410: loss -0.0293 lr 5.00E-05 eps 0.031 (time 0.4217)
+Step 00420: loss -0.0293 lr 5.00E-05 eps 0.031 (time 0.4309)
+Step 00430: loss -0.0294 lr 5.00E-05 eps 0.031 (time 0.4403)
+Step 00440: loss -0.0296 lr 5.00E-05 eps 0.031 (time 0.4428)
+Step 00450: loss -0.0297 lr 5.00E-05 eps 0.031 (time 0.4296)
+Step 00460: loss -0.0298 lr 5.00E-05 eps 0.031 (time 0.4342)
+Step 00470: loss -0.0301 lr 5.00E-05 eps 0.031 (time 0.4416)
+Step 00480: loss -0.0303 lr 5.00E-05 eps 0.031 (time 0.4343)
+Step 00490: loss -0.0303 lr 5.00E-05 eps 0.031 (time 0.4509)
+Step 00500: loss -0.0303 lr 5.00E-05 eps 0.031 (time 0.4240)
+Step 00510: loss -0.0305 lr 5.00E-05 eps 0.031 (time 0.4342)
+Step 00520: loss -0.0305 lr 5.00E-05 eps 0.031 (time 0.4198)
+Step 00530: loss -0.0305 lr 5.00E-05 eps 0.031 (time 0.4311)
+Step 00540: loss -0.0307 lr 5.00E-05 eps 0.031 (time 0.4322)
+Step 00550: loss -0.0306 lr 5.00E-05 eps 0.031 (time 0.4215)
+Step 00560: loss -0.0308 lr 5.00E-05 eps 0.031 (time 0.4181)
+Step 00570: loss -0.0309 lr 5.00E-05 eps 0.031 (time 0.4722)
+Step 00580: loss -0.0310 lr 5.00E-05 eps 0.031 (time 0.4272)
+Step 00590: loss -0.0308 lr 5.00E-05 eps 0.031 (time 0.4484)
+clipimage succImages: 23  totalImages: 35
+attacking image index : 40
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 3.6866)
+[log] Annealing max_lr
+Step 00010: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4433)
+[log] Annealing max_lr
+Step 00020: loss -0.0001 lr 2.50E-03 eps 0.031 (time 0.4121)
+[log] Annealing max_lr
+Step 00030: loss -0.0002 lr 1.25E-03 eps 0.031 (time 0.4188)
+Step 00040: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4335)
+Step 00050: loss -0.0005 lr 1.25E-03 eps 0.031 (time 0.4415)
+[log] Annealing max_lr
+Step 00060: loss -0.0005 lr 6.25E-04 eps 0.031 (time 0.4135)
+Step 00070: loss -0.0006 lr 6.25E-04 eps 0.031 (time 0.4160)
+[log] Annealing max_lr
+Step 00080: loss -0.0006 lr 3.13E-04 eps 0.031 (time 0.4329)
+Step 00090: loss -0.0006 lr 3.13E-04 eps 0.031 (time 0.4286)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00100: loss -0.0006 lr 7.81E-05 eps 0.031 (time 0.4319)
+Step 00110: loss -0.0006 lr 7.81E-05 eps 0.031 (time 0.4328)
+Step 00120: loss -0.0006 lr 7.81E-05 eps 0.031 (time 0.4264)
+[log] Annealing max_lr
+Step 00130: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4254)
+Step 00140: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4647)
+Step 00150: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4319)
+Step 00160: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4453)
+Step 00170: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4413)
+Step 00180: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4290)
+Step 00190: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4427)
+Step 00200: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4456)
+Step 00210: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4563)
+Step 00220: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4353)
+Step 00230: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4228)
+Step 00240: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4467)
+Step 00250: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4552)
+Step 00260: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4346)
+Step 00270: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4457)
+Step 00280: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4705)
+Step 00290: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4276)
+Step 00300: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4368)
+Step 00310: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4395)
+Step 00320: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4318)
+Step 00330: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4571)
+Step 00340: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4180)
+Step 00350: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4298)
+Step 00360: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4704)
+Step 00370: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00380: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4416)
+Step 00390: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4385)
+Step 00400: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00410: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4422)
+Step 00420: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4567)
+Step 00430: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4446)
+Step 00440: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4587)
+Step 00450: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4216)
+Step 00460: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4749)
+Step 00470: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.5168)
+Step 00480: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4781)
+Step 00490: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4207)
+Step 00500: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4477)
+Step 00510: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4330)
+Step 00520: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4473)
+Step 00530: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4276)
+Step 00540: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4487)
+Step 00550: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4168)
+Step 00560: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4448)
+Step 00570: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4438)
+Step 00580: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4505)
+Step 00590: loss -0.0006 lr 5.00E-05 eps 0.031 (time 0.4415)
+clipimage succImages: 23  totalImages: 36
+attacking image index : 41
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 3.9757)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4277)
+Step 00020: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4169)
+[log] Annealing max_lr
+Step 00030: loss -0.0002 lr 2.50E-03 eps 0.031 (time 0.4445)
+[log] Annealing max_lr
+Step 00040: loss -0.0003 lr 1.25E-03 eps 0.031 (time 0.4593)
+Step 00050: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4158)
+Step 00060: loss -0.0006 lr 1.25E-03 eps 0.031 (time 0.4135)
+[log] Annealing max_lr
+Step 00070: loss -0.0006 lr 6.25E-04 eps 0.031 (time 0.4215)
+Step 00080: loss -0.0007 lr 6.25E-04 eps 0.031 (time 0.4092)
+Step 00090: loss -0.0008 lr 6.25E-04 eps 0.031 (time 0.4733)
+Step 00100: loss -0.0008 lr 6.25E-04 eps 0.031 (time 0.4605)
+[log] Annealing max_lr
+Step 00110: loss -0.0009 lr 3.13E-04 eps 0.031 (time 0.4333)
+[log] Annealing max_lr
+Step 00120: loss -0.0009 lr 1.56E-04 eps 0.031 (time 0.4283)
+Step 00130: loss -0.0009 lr 1.56E-04 eps 0.031 (time 0.4889)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00140: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4145)
+Step 00150: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4439)
+Step 00160: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4176)
+Step 00170: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4362)
+Step 00180: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4487)
+Step 00190: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4591)
+Step 00200: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4378)
+Step 00210: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4254)
+Step 00220: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4415)
+Step 00230: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4234)
+Step 00240: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00250: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4418)
+Step 00260: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4555)
+Step 00270: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4203)
+Step 00280: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4405)
+Step 00290: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4391)
+Step 00300: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4162)
+Step 00310: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4348)
+Step 00320: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4568)
+Step 00330: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4544)
+Step 00340: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4236)
+Step 00350: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4331)
+Step 00360: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4160)
+Step 00370: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4439)
+Step 00380: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4249)
+Step 00390: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4564)
+Step 00400: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4565)
+Step 00410: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4644)
+Step 00420: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4222)
+Step 00430: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4306)
+Step 00440: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4601)
+Step 00450: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4270)
+Step 00460: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4479)
+Step 00470: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4197)
+Step 00480: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4387)
+Step 00490: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4314)
+Step 00500: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4429)
+Step 00510: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4457)
+Step 00520: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4447)
+Step 00530: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4657)
+Step 00540: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4403)
+Step 00550: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4402)
+Step 00560: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4358)
+Step 00570: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4569)
+Step 00580: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4273)
+Step 00590: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4335)
+clipimage succImages: 23  totalImages: 37
+attacking image index : 42
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 3.8598)
+[log] Annealing max_lr
+Step 00010: loss -0.0009 lr 5.00E-03 eps 0.031 (time 0.4275)
+Step 00020: loss -0.0247 lr 5.00E-03 eps 0.031 (time 0.4310)
+[log] Annealing max_lr
+[log] early stopping at iteration 26
+clipimage succImages: 24  totalImages: 38
+attacking image index : 43
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0143 lr 1.00E-02 eps 0.031 (time 4.0087)
+[log] Annealing max_lr
+[log] early stopping at iteration 6
+clipimage succImages: 25  totalImages: 39
+attacking image index : 44
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0080 lr 1.00E-02 eps 0.031 (time 4.1233)
+Step 00010: loss -0.0576 lr 1.00E-02 eps 0.031 (time 0.3984)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.2009 lr 2.50E-03 eps 0.031 (time 0.4225)
+[log] early stopping at iteration 30
+clipimage succImages: 26  totalImages: 40
+attacking image index : 45
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 4.3755)
+[log] Annealing max_lr
+Step 00010: loss -0.0002 lr 5.00E-03 eps 0.031 (time 0.4429)
+[log] Annealing max_lr
+Step 00020: loss -0.0003 lr 2.50E-03 eps 0.031 (time 0.4230)
+Step 00030: loss -0.0004 lr 2.50E-03 eps 0.031 (time 0.4269)
+[log] Annealing max_lr
+Step 00040: loss -0.0005 lr 1.25E-03 eps 0.031 (time 0.4026)
+Step 00050: loss -0.0007 lr 1.25E-03 eps 0.031 (time 0.4117)
+Step 00060: loss -0.0007 lr 1.25E-03 eps 0.031 (time 0.4146)
+[log] Annealing max_lr
+Step 00070: loss -0.0008 lr 6.25E-04 eps 0.031 (time 0.4133)
+[log] Annealing max_lr
+Step 00080: loss -0.0008 lr 3.13E-04 eps 0.031 (time 0.4184)
+Step 00090: loss -0.0008 lr 3.13E-04 eps 0.031 (time 0.4067)
+[log] Annealing max_lr
+Step 00100: loss -0.0008 lr 1.56E-04 eps 0.031 (time 0.4249)
+[log] Annealing max_lr
+Step 00110: loss -0.0008 lr 7.81E-05 eps 0.031 (time 0.4199)
+[log] Annealing max_lr
+Step 00120: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4397)
+Step 00130: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4185)
+Step 00140: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4149)
+Step 00150: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4414)
+Step 00160: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4327)
+Step 00170: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4128)
+Step 00180: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4126)
+Step 00190: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.3995)
+Step 00200: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4127)
+Step 00210: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4304)
+Step 00220: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4400)
+Step 00230: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4291)
+Step 00240: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4041)
+Step 00250: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4207)
+Step 00260: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4221)
+Step 00270: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4189)
+Step 00280: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4361)
+Step 00290: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4063)
+Step 00300: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4367)
+Step 00310: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4067)
+Step 00320: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4058)
+Step 00330: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4401)
+Step 00340: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4322)
+Step 00350: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4226)
+Step 00360: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4078)
+Step 00370: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00380: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4455)
+Step 00390: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4148)
+Step 00400: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4168)
+Step 00410: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4522)
+Step 00420: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4233)
+Step 00430: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4708)
+Step 00440: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4188)
+Step 00450: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4135)
+Step 00460: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4105)
+Step 00470: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4109)
+Step 00480: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4081)
+Step 00490: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4400)
+Step 00500: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4231)
+Step 00510: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4038)
+Step 00520: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4064)
+Step 00530: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4425)
+Step 00540: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4100)
+Step 00550: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4365)
+Step 00560: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.3971)
+Step 00570: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4313)
+Step 00580: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4251)
+Step 00590: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4139)
+clipimage succImages: 26  totalImages: 41
+attacking image index : 46
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0199 lr 1.00E-02 eps 0.031 (time 4.3759)
+[log] early stopping at iteration 5
+clipimage succImages: 27  totalImages: 42
+attacking image index : 47
+chose pseudorandom target class: 7
+Called
+restored
+skip the wrong example  47
+clipimage succImages: 27  totalImages: 42
+attacking image index : 48
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 4.0466)
+[log] Annealing max_lr
+Step 00010: loss -0.0125 lr 5.00E-03 eps 0.031 (time 0.3969)
+[log] Annealing max_lr
+Step 00020: loss -0.1501 lr 2.50E-03 eps 0.031 (time 0.4352)
+[log] early stopping at iteration 23
+clipimage succImages: 28  totalImages: 43
+attacking image index : 49
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 4.2946)
+[log] Annealing max_lr
+Step 00010: loss -0.0006 lr 5.00E-03 eps 0.031 (time 0.4019)
+[log] Annealing max_lr
+Step 00020: loss -0.0099 lr 2.50E-03 eps 0.031 (time 0.4214)
+[log] early stopping at iteration 30
+clipimage succImages: 29  totalImages: 44
+attacking image index : 50
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 4.8326)
+[log] Annealing max_lr
+Step 00010: loss -0.0049 lr 5.00E-03 eps 0.031 (time 0.4010)
+[log] Annealing max_lr
+Step 00020: loss -0.4332 lr 2.50E-03 eps 0.031 (time 0.4014)
+[log] early stopping at iteration 23
+clipimage succImages: 30  totalImages: 45
+attacking image index : 51
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0004 lr 1.00E-02 eps 0.031 (time 5.2692)
+[log] Annealing max_lr
+Step 00010: loss -0.0066 lr 5.00E-03 eps 0.031 (time 0.4517)
+[log] Annealing max_lr
+Step 00020: loss -0.2965 lr 2.50E-03 eps 0.031 (time 0.4281)
+[log] early stopping at iteration 23
+clipimage succImages: 31  totalImages: 46
+attacking image index : 52
+chose pseudorandom target class: 5
+Called
+restored
+skip the wrong example  52
+clipimage succImages: 31  totalImages: 46
+attacking image index : 53
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0048 lr 1.00E-02 eps 0.031 (time 5.0897)
+[log] Annealing max_lr
+Step 00010: loss -0.0180 lr 5.00E-03 eps 0.031 (time 0.4149)
+[log] early stopping at iteration 12
+clipimage succImages: 32  totalImages: 47
+attacking image index : 54
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 5.5151)
+[log] Annealing max_lr
+Step 00010: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4382)
+[log] Annealing max_lr
+Step 00020: loss -0.0004 lr 2.50E-03 eps 0.031 (time 0.4396)
+Step 00030: loss -0.0010 lr 2.50E-03 eps 0.031 (time 0.4165)
+[log] Annealing max_lr
+Step 00040: loss -0.0052 lr 1.25E-03 eps 0.031 (time 0.4217)
+[log] Annealing max_lr
+Step 00050: loss -0.0076 lr 6.25E-04 eps 0.031 (time 0.4076)
+Step 00060: loss -0.0106 lr 6.25E-04 eps 0.031 (time 0.4206)
+Step 00070: loss -0.0119 lr 6.25E-04 eps 0.031 (time 0.4205)
+[log] Annealing max_lr
+Step 00080: loss -0.0132 lr 3.13E-04 eps 0.031 (time 0.4379)
+Step 00090: loss -0.0149 lr 3.13E-04 eps 0.031 (time 0.4077)
+[log] Annealing max_lr
+Step 00100: loss -0.0153 lr 1.56E-04 eps 0.031 (time 0.4123)
+Step 00110: loss -0.0155 lr 1.56E-04 eps 0.031 (time 0.4243)
+Step 00120: loss -0.0159 lr 1.56E-04 eps 0.031 (time 0.4171)
+[log] Annealing max_lr
+Step 00130: loss -0.0160 lr 7.81E-05 eps 0.031 (time 0.4278)
+[log] Annealing max_lr
+Step 00140: loss -0.0161 lr 5.00E-05 eps 0.031 (time 0.4293)
+Step 00150: loss -0.0161 lr 5.00E-05 eps 0.031 (time 0.4246)
+Step 00160: loss -0.0162 lr 5.00E-05 eps 0.031 (time 0.4298)
+Step 00170: loss -0.0163 lr 5.00E-05 eps 0.031 (time 0.4306)
+Step 00180: loss -0.0165 lr 5.00E-05 eps 0.031 (time 0.4267)
+Step 00190: loss -0.0164 lr 5.00E-05 eps 0.031 (time 0.4198)
+Step 00200: loss -0.0165 lr 5.00E-05 eps 0.031 (time 0.4301)
+Step 00210: loss -0.0164 lr 5.00E-05 eps 0.031 (time 0.4184)
+Step 00220: loss -0.0166 lr 5.00E-05 eps 0.031 (time 0.4329)
+Step 00230: loss -0.0166 lr 5.00E-05 eps 0.031 (time 0.4332)
+Step 00240: loss -0.0167 lr 5.00E-05 eps 0.031 (time 0.4227)
+Step 00250: loss -0.0166 lr 5.00E-05 eps 0.031 (time 0.4290)
+Step 00260: loss -0.0167 lr 5.00E-05 eps 0.031 (time 0.4607)
+Step 00270: loss -0.0167 lr 5.00E-05 eps 0.031 (time 0.4392)
+Step 00280: loss -0.0167 lr 5.00E-05 eps 0.031 (time 0.4223)
+Step 00290: loss -0.0168 lr 5.00E-05 eps 0.031 (time 0.4218)
+Step 00300: loss -0.0168 lr 5.00E-05 eps 0.031 (time 0.4092)
+Step 00310: loss -0.0167 lr 5.00E-05 eps 0.031 (time 0.4295)
+Step 00320: loss -0.0168 lr 5.00E-05 eps 0.031 (time 0.4223)
+Step 00330: loss -0.0168 lr 5.00E-05 eps 0.031 (time 0.4369)
+Step 00340: loss -0.0168 lr 5.00E-05 eps 0.031 (time 0.4165)
+Step 00350: loss -0.0172 lr 5.00E-05 eps 0.031 (time 0.4472)
+Step 00360: loss -0.0173 lr 5.00E-05 eps 0.031 (time 0.4137)
+Step 00370: loss -0.0175 lr 5.00E-05 eps 0.031 (time 0.4535)
+Step 00380: loss -0.0177 lr 5.00E-05 eps 0.031 (time 0.4268)
+Step 00390: loss -0.0177 lr 5.00E-05 eps 0.031 (time 0.4340)
+Step 00400: loss -0.0179 lr 5.00E-05 eps 0.031 (time 0.4550)
+Step 00410: loss -0.0179 lr 5.00E-05 eps 0.031 (time 0.4172)
+Step 00420: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.4220)
+Step 00430: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.4179)
+Step 00440: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.4529)
+Step 00450: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.4287)
+Step 00460: loss -0.0180 lr 5.00E-05 eps 0.031 (time 0.4317)
+Step 00470: loss -0.0181 lr 5.00E-05 eps 0.031 (time 0.4330)
+Step 00480: loss -0.0183 lr 5.00E-05 eps 0.031 (time 0.4251)
+Step 00490: loss -0.0187 lr 5.00E-05 eps 0.031 (time 0.4376)
+Step 00500: loss -0.0190 lr 5.00E-05 eps 0.031 (time 0.4201)
+Step 00510: loss -0.0194 lr 5.00E-05 eps 0.031 (time 0.4214)
+Step 00520: loss -0.0195 lr 5.00E-05 eps 0.031 (time 0.4289)
+Step 00530: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4485)
+Step 00540: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4052)
+Step 00550: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4275)
+Step 00560: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4185)
+Step 00570: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4105)
+Step 00580: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4372)
+Step 00590: loss -0.0197 lr 5.00E-05 eps 0.031 (time 0.4143)
+clipimage succImages: 32  totalImages: 48
+attacking image index : 55
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 4.8150)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4262)
+[log] Annealing max_lr
+[log] early stopping at iteration 20
+clipimage succImages: 33  totalImages: 49
+attacking image index : 56
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.1492 lr 1.00E-02 eps 0.031 (time 4.8525)
+[log] early stopping at iteration 3
+clipimage succImages: 34  totalImages: 50
+attacking image index : 57
+chose pseudorandom target class: 6
+Called
+restored
+skip the wrong example  57
+clipimage succImages: 34  totalImages: 50
+attacking image index : 58
+chose pseudorandom target class: 3
+Called
+restored
+skip the wrong example  58
+clipimage succImages: 34  totalImages: 50
+attacking image index : 59
+chose pseudorandom target class: 1
+Called
+restored
+skip the wrong example  59
+clipimage succImages: 34  totalImages: 50
+attacking image index : 60
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 5.0841)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4189)
+[log] Annealing max_lr
+Step 00020: loss -0.0001 lr 2.50E-03 eps 0.031 (time 0.4070)
+Step 00030: loss -0.0002 lr 2.50E-03 eps 0.031 (time 0.4095)
+[log] Annealing max_lr
+Step 00040: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4154)
+Step 00050: loss -0.0009 lr 1.25E-03 eps 0.031 (time 0.4234)
+Step 00060: loss -0.0013 lr 1.25E-03 eps 0.031 (time 0.4166)
+Step 00070: loss -0.0021 lr 1.25E-03 eps 0.031 (time 0.4110)
+Step 00080: loss -0.0028 lr 1.25E-03 eps 0.031 (time 0.4287)
+[log] Annealing max_lr
+Step 00090: loss -0.0036 lr 6.25E-04 eps 0.031 (time 0.4149)
+Step 00100: loss -0.0050 lr 6.25E-04 eps 0.031 (time 0.4387)
+Step 00110: loss -0.0056 lr 6.25E-04 eps 0.031 (time 0.4344)
+Step 00120: loss -0.0061 lr 6.25E-04 eps 0.031 (time 0.4167)
+[log] Annealing max_lr
+Step 00130: loss -0.0066 lr 3.13E-04 eps 0.031 (time 0.4231)
+[log] Annealing max_lr
+Step 00140: loss -0.0067 lr 1.56E-04 eps 0.031 (time 0.4044)
+Step 00150: loss -0.0069 lr 1.56E-04 eps 0.031 (time 0.4329)
+Step 00160: loss -0.0070 lr 1.56E-04 eps 0.031 (time 0.4176)
+[log] Annealing max_lr
+Step 00170: loss -0.0070 lr 7.81E-05 eps 0.031 (time 0.4832)
+[log] Annealing max_lr
+Step 00180: loss -0.0070 lr 5.00E-05 eps 0.031 (time 0.4234)
+Step 00190: loss -0.0070 lr 5.00E-05 eps 0.031 (time 0.4152)
+Step 00200: loss -0.0070 lr 5.00E-05 eps 0.031 (time 0.4309)
+Step 00210: loss -0.0070 lr 5.00E-05 eps 0.031 (time 0.4465)
+Step 00220: loss -0.0071 lr 5.00E-05 eps 0.031 (time 0.4331)
+Step 00230: loss -0.0071 lr 5.00E-05 eps 0.031 (time 0.4611)
+Step 00240: loss -0.0071 lr 5.00E-05 eps 0.031 (time 0.4361)
+Step 00250: loss -0.0071 lr 5.00E-05 eps 0.031 (time 0.4233)
+Step 00260: loss -0.0072 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00270: loss -0.0072 lr 5.00E-05 eps 0.031 (time 0.4151)
+Step 00280: loss -0.0073 lr 5.00E-05 eps 0.031 (time 0.4580)
+Step 00290: loss -0.0073 lr 5.00E-05 eps 0.031 (time 0.4326)
+Step 00300: loss -0.0073 lr 5.00E-05 eps 0.031 (time 0.4161)
+Step 00310: loss -0.0073 lr 5.00E-05 eps 0.031 (time 0.4246)
+Step 00320: loss -0.0073 lr 5.00E-05 eps 0.031 (time 0.4239)
+Step 00330: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4679)
+Step 00340: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4372)
+Step 00350: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4515)
+Step 00360: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4143)
+Step 00370: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4255)
+Step 00380: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4257)
+Step 00390: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4119)
+Step 00400: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4393)
+Step 00410: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4331)
+Step 00420: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00430: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4093)
+Step 00440: loss -0.0074 lr 5.00E-05 eps 0.031 (time 0.4415)
+Step 00450: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4245)
+Step 00460: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4402)
+Step 00470: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4339)
+Step 00480: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4117)
+Step 00490: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00500: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4636)
+Step 00510: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4086)
+Step 00520: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4092)
+Step 00530: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4225)
+Step 00540: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4484)
+Step 00550: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4495)
+Step 00560: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4282)
+Step 00570: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4192)
+Step 00580: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4334)
+Step 00590: loss -0.0075 lr 5.00E-05 eps 0.031 (time 0.4169)
+clipimage succImages: 34  totalImages: 51
+attacking image index : 61
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.3335 lr 1.00E-02 eps 0.031 (time 5.1320)
+[log] early stopping at iteration 2
+clipimage succImages: 35  totalImages: 52
+attacking image index : 62
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 5.1468)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4226)
+[log] Annealing max_lr
+Step 00020: loss -0.0000 lr 2.50E-03 eps 0.031 (time 0.4270)
+Step 00030: loss -0.0001 lr 2.50E-03 eps 0.031 (time 0.4267)
+[log] Annealing max_lr
+Step 00040: loss -0.0002 lr 1.25E-03 eps 0.031 (time 0.4244)
+[log] Annealing max_lr
+Step 00050: loss -0.0003 lr 6.25E-04 eps 0.031 (time 0.4258)
+Step 00060: loss -0.0003 lr 6.25E-04 eps 0.031 (time 0.4243)
+Step 00070: loss -0.0003 lr 6.25E-04 eps 0.031 (time 0.4203)
+Step 00080: loss -0.0004 lr 6.25E-04 eps 0.031 (time 0.4154)
+Step 00090: loss -0.0004 lr 6.25E-04 eps 0.031 (time 0.4060)
+[log] Annealing max_lr
+Step 00100: loss -0.0004 lr 3.13E-04 eps 0.031 (time 0.4282)
+[log] Annealing max_lr
+Step 00110: loss -0.0004 lr 1.56E-04 eps 0.031 (time 0.4267)
+[log] Annealing max_lr
+Step 00120: loss -0.0004 lr 7.81E-05 eps 0.031 (time 0.4300)
+[log] Annealing max_lr
+Step 00130: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00140: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4353)
+Step 00150: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4678)
+Step 00160: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4518)
+Step 00170: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4315)
+Step 00180: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4286)
+Step 00190: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4062)
+Step 00200: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4313)
+Step 00210: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4012)
+Step 00220: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4098)
+Step 00230: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4511)
+Step 00240: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4127)
+Step 00250: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4013)
+Step 00260: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4351)
+Step 00270: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4127)
+Step 00280: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4248)
+Step 00290: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4158)
+Step 00300: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4093)
+Step 00310: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4124)
+Step 00320: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4142)
+Step 00330: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4015)
+Step 00340: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00350: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4234)
+Step 00360: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4175)
+Step 00370: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4293)
+Step 00380: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4036)
+Step 00390: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4065)
+Step 00400: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4400)
+Step 00410: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4092)
+Step 00420: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4143)
+Step 00430: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4228)
+Step 00440: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4331)
+Step 00450: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4509)
+Step 00460: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4139)
+Step 00470: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4044)
+Step 00480: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4199)
+Step 00490: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4059)
+Step 00500: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4024)
+Step 00510: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00520: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4446)
+Step 00530: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4415)
+Step 00540: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4476)
+Step 00550: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00560: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4097)
+Step 00570: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4141)
+Step 00580: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4164)
+Step 00590: loss -0.0004 lr 5.00E-05 eps 0.031 (time 0.4380)
+clipimage succImages: 35  totalImages: 53
+attacking image index : 63
+chose pseudorandom target class: 4
+Called
+restored
+skip the wrong example  63
+clipimage succImages: 35  totalImages: 53
+attacking image index : 64
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 5.5829)
+[log] Annealing max_lr
+Step 00010: loss -0.0010 lr 5.00E-03 eps 0.031 (time 0.4071)
+Step 00020: loss -0.1375 lr 5.00E-03 eps 0.031 (time 0.4061)
+[log] early stopping at iteration 25
+clipimage succImages: 36  totalImages: 54
+attacking image index : 65
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 5.9695)
+[log] Annealing max_lr
+Step 00010: loss -0.0075 lr 5.00E-03 eps 0.031 (time 0.3994)
+[log] Annealing max_lr
+[log] early stopping at iteration 20
+clipimage succImages: 37  totalImages: 55
+attacking image index : 66
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0263 lr 1.00E-02 eps 0.031 (time 5.3706)
+[log] Annealing max_lr
+[log] early stopping at iteration 10
+clipimage succImages: 38  totalImages: 56
+attacking image index : 67
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 5.6765)
+[log] Annealing max_lr
+Step 00010: loss -0.0003 lr 5.00E-03 eps 0.031 (time 0.4038)
+[log] Annealing max_lr
+Step 00020: loss -0.0005 lr 2.50E-03 eps 0.031 (time 0.4200)
+Step 00030: loss -0.0006 lr 2.50E-03 eps 0.031 (time 0.4024)
+[log] Annealing max_lr
+Step 00040: loss -0.0007 lr 1.25E-03 eps 0.031 (time 0.4162)
+Step 00050: loss -0.0009 lr 1.25E-03 eps 0.031 (time 0.4000)
+Step 00060: loss -0.0009 lr 1.25E-03 eps 0.031 (time 0.4170)
+Step 00070: loss -0.0010 lr 1.25E-03 eps 0.031 (time 0.4152)
+[log] Annealing max_lr
+Step 00080: loss -0.0010 lr 6.25E-04 eps 0.031 (time 0.3989)
+Step 00090: loss -0.0011 lr 6.25E-04 eps 0.031 (time 0.4460)
+[log] Annealing max_lr
+Step 00100: loss -0.0011 lr 3.13E-04 eps 0.031 (time 0.4156)
+[log] Annealing max_lr
+Step 00110: loss -0.0011 lr 1.56E-04 eps 0.031 (time 0.4245)
+[log] Annealing max_lr
+Step 00120: loss -0.0011 lr 7.81E-05 eps 0.031 (time 0.4410)
+[log] Annealing max_lr
+Step 00130: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4136)
+Step 00140: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4176)
+Step 00150: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4150)
+Step 00160: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4116)
+Step 00170: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4036)
+Step 00180: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4195)
+Step 00190: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00200: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4036)
+Step 00210: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4269)
+Step 00220: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4060)
+Step 00230: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4348)
+Step 00240: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4071)
+Step 00250: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4208)
+Step 00260: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4035)
+Step 00270: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4353)
+Step 00280: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4345)
+Step 00290: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4066)
+Step 00300: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4154)
+Step 00310: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4272)
+Step 00320: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4115)
+Step 00330: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4383)
+Step 00340: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4274)
+Step 00350: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4063)
+Step 00360: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4511)
+Step 00370: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4042)
+Step 00380: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4249)
+Step 00390: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4280)
+Step 00400: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4322)
+Step 00410: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4530)
+Step 00420: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4297)
+Step 00430: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4023)
+Step 00440: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4055)
+Step 00450: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4274)
+Step 00460: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4280)
+Step 00470: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4487)
+Step 00480: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4262)
+Step 00490: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4053)
+Step 00500: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4210)
+Step 00510: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4275)
+Step 00520: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4817)
+Step 00530: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4101)
+Step 00540: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4317)
+Step 00550: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4116)
+Step 00560: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4103)
+Step 00570: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4658)
+Step 00580: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4129)
+Step 00590: loss -0.0011 lr 5.00E-05 eps 0.031 (time 0.4565)
+clipimage succImages: 38  totalImages: 57
+attacking image index : 68
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0042 lr 1.00E-02 eps 0.031 (time 6.1201)
+[log] Annealing max_lr
+Step 00010: loss -0.0117 lr 5.00E-03 eps 0.031 (time 0.3995)
+[log] early stopping at iteration 17
+clipimage succImages: 39  totalImages: 58
+attacking image index : 69
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0123 lr 1.00E-02 eps 0.031 (time 6.3496)
+[log] early stopping at iteration 9
+clipimage succImages: 40  totalImages: 59
+attacking image index : 70
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.2987 lr 1.00E-02 eps 0.031 (time 6.3978)
+[log] early stopping at iteration 1
+clipimage succImages: 41  totalImages: 60
+attacking image index : 71
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0003 lr 1.00E-02 eps 0.031 (time 6.1702)
+[log] Annealing max_lr
+Step 00010: loss -0.3978 lr 5.00E-03 eps 0.031 (time 0.3967)
+[log] early stopping at iteration 12
+clipimage succImages: 42  totalImages: 61
+attacking image index : 72
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 6.7812)
+[log] Annealing max_lr
+Step 00010: loss -0.0005 lr 5.00E-03 eps 0.031 (time 0.4165)
+[log] Annealing max_lr
+Step 00020: loss -0.0088 lr 2.50E-03 eps 0.031 (time 0.4206)
+[log] Annealing max_lr
+Step 00030: loss -0.0663 lr 1.25E-03 eps 0.031 (time 0.4218)
+Step 00040: loss -0.4621 lr 1.25E-03 eps 0.031 (time 0.4224)
+[log] early stopping at iteration 41
+clipimage succImages: 43  totalImages: 62
+attacking image index : 73
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 6.2445)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4040)
+[log] Annealing max_lr
+Step 00020: loss -0.0002 lr 2.50E-03 eps 0.031 (time 0.4408)
+Step 00030: loss -0.0006 lr 2.50E-03 eps 0.031 (time 0.4090)
+[log] Annealing max_lr
+Step 00040: loss -0.0033 lr 1.25E-03 eps 0.031 (time 0.4210)
+Step 00050: loss -0.0122 lr 1.25E-03 eps 0.031 (time 0.4456)
+Step 00060: loss -0.0325 lr 1.25E-03 eps 0.031 (time 0.4207)
+Step 00070: loss -0.0520 lr 1.25E-03 eps 0.031 (time 0.4204)
+[log] Annealing max_lr
+Step 00080: loss -0.1231 lr 6.25E-04 eps 0.031 (time 0.4018)
+Step 00090: loss -0.1711 lr 6.25E-04 eps 0.031 (time 0.4441)
+Step 00100: loss -0.2308 lr 6.25E-04 eps 0.031 (time 0.4196)
+Step 00110: loss -0.2731 lr 6.25E-04 eps 0.031 (time 0.4119)
+[log] Annealing max_lr
+Step 00120: loss -0.3080 lr 3.13E-04 eps 0.031 (time 0.4459)
+[log] Annealing max_lr
+Step 00130: loss -0.3216 lr 1.56E-04 eps 0.031 (time 0.4484)
+[log] Annealing max_lr
+Step 00140: loss -0.3281 lr 7.81E-05 eps 0.031 (time 0.4264)
+[log] Annealing max_lr
+Step 00150: loss -0.3337 lr 5.00E-05 eps 0.031 (time 0.4054)
+Step 00160: loss -0.3374 lr 5.00E-05 eps 0.031 (time 0.4083)
+Step 00170: loss -0.3435 lr 5.00E-05 eps 0.031 (time 0.4531)
+Step 00180: loss -0.3426 lr 5.00E-05 eps 0.031 (time 0.4081)
+Step 00190: loss -0.3443 lr 5.00E-05 eps 0.031 (time 0.4373)
+Step 00200: loss -0.3470 lr 5.00E-05 eps 0.031 (time 0.4492)
+Step 00210: loss -0.3489 lr 5.00E-05 eps 0.031 (time 0.4127)
+Step 00220: loss -0.3498 lr 5.00E-05 eps 0.031 (time 0.4154)
+Step 00230: loss -0.3507 lr 5.00E-05 eps 0.031 (time 0.4351)
+Step 00240: loss -0.3540 lr 5.00E-05 eps 0.031 (time 0.4563)
+Step 00250: loss -0.3542 lr 5.00E-05 eps 0.031 (time 0.4353)
+Step 00260: loss -0.3546 lr 5.00E-05 eps 0.031 (time 0.4495)
+Step 00270: loss -0.3575 lr 5.00E-05 eps 0.031 (time 0.4338)
+Step 00280: loss -0.3552 lr 5.00E-05 eps 0.031 (time 0.4211)
+Step 00290: loss -0.3578 lr 5.00E-05 eps 0.031 (time 0.4078)
+Step 00300: loss -0.3559 lr 5.00E-05 eps 0.031 (time 0.4189)
+Step 00310: loss -0.3620 lr 5.00E-05 eps 0.031 (time 0.4133)
+Step 00320: loss -0.3613 lr 5.00E-05 eps 0.031 (time 0.4465)
+Step 00330: loss -0.3605 lr 5.00E-05 eps 0.031 (time 0.4358)
+Step 00340: loss -0.3667 lr 5.00E-05 eps 0.031 (time 0.4106)
+Step 00350: loss -0.3635 lr 5.00E-05 eps 0.031 (time 0.4329)
+Step 00360: loss -0.3706 lr 5.00E-05 eps 0.031 (time 0.4401)
+Step 00370: loss -0.3736 lr 5.00E-05 eps 0.031 (time 0.4246)
+Step 00380: loss -0.3738 lr 5.00E-05 eps 0.031 (time 0.4289)
+Step 00390: loss -0.3758 lr 5.00E-05 eps 0.031 (time 0.4395)
+Step 00400: loss -0.3791 lr 5.00E-05 eps 0.031 (time 0.4193)
+Step 00410: loss -0.3783 lr 5.00E-05 eps 0.031 (time 0.4307)
+Step 00420: loss -0.3831 lr 5.00E-05 eps 0.031 (time 0.4166)
+Step 00430: loss -0.3820 lr 5.00E-05 eps 0.031 (time 0.4309)
+Step 00440: loss -0.3828 lr 5.00E-05 eps 0.031 (time 0.4410)
+Step 00450: loss -0.3832 lr 5.00E-05 eps 0.031 (time 0.4482)
+Step 00460: loss -0.3856 lr 5.00E-05 eps 0.031 (time 0.4346)
+Step 00470: loss -0.3855 lr 5.00E-05 eps 0.031 (time 0.4532)
+Step 00480: loss -0.3854 lr 5.00E-05 eps 0.031 (time 0.4400)
+Step 00490: loss -0.3858 lr 5.00E-05 eps 0.031 (time 0.4227)
+Step 00500: loss -0.3862 lr 5.00E-05 eps 0.031 (time 0.4193)
+Step 00510: loss -0.3864 lr 5.00E-05 eps 0.031 (time 0.4557)
+Step 00520: loss -0.3855 lr 5.00E-05 eps 0.031 (time 0.4355)
+Step 00530: loss -0.3860 lr 5.00E-05 eps 0.031 (time 0.4329)
+Step 00540: loss -0.3913 lr 5.00E-05 eps 0.031 (time 0.4297)
+Step 00550: loss -0.3942 lr 5.00E-05 eps 0.031 (time 0.4321)
+Step 00560: loss -0.3929 lr 5.00E-05 eps 0.031 (time 0.4470)
+Step 00570: loss -0.3880 lr 5.00E-05 eps 0.031 (time 0.4216)
+Step 00580: loss -0.3875 lr 5.00E-05 eps 0.031 (time 0.4200)
+Step 00590: loss -0.3898 lr 5.00E-05 eps 0.031 (time 0.4120)
+clipimage succImages: 43  totalImages: 63
+attacking image index : 74
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0005 lr 1.00E-02 eps 0.031 (time 6.1518)
+[log] Annealing max_lr
+Step 00010: loss -0.0143 lr 5.00E-03 eps 0.031 (time 0.4069)
+Step 00020: loss -0.0677 lr 5.00E-03 eps 0.031 (time 0.4057)
+[log] Annealing max_lr
+Step 00030: loss -0.3519 lr 2.50E-03 eps 0.031 (time 0.4056)
+[log] early stopping at iteration 34
+clipimage succImages: 44  totalImages: 64
+attacking image index : 75
+chose pseudorandom target class: 8
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 6.0663)
+Step 00010: loss -0.0000 lr 1.00E-02 eps 0.031 (time 0.4280)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00020: loss -0.0000 lr 2.50E-03 eps 0.031 (time 0.4079)
+Step 00030: loss -0.0001 lr 2.50E-03 eps 0.031 (time 0.4214)
+Step 00040: loss -0.0003 lr 2.50E-03 eps 0.031 (time 0.4182)
+[log] Annealing max_lr
+Step 00050: loss -0.0010 lr 1.25E-03 eps 0.031 (time 0.4674)
+Step 00060: loss -0.0019 lr 1.25E-03 eps 0.031 (time 0.4360)
+[log] Annealing max_lr
+Step 00070: loss -0.0031 lr 6.25E-04 eps 0.031 (time 0.4200)
+Step 00080: loss -0.0062 lr 6.25E-04 eps 0.031 (time 0.4175)
+Step 00090: loss -0.0070 lr 6.25E-04 eps 0.031 (time 0.4237)
+Step 00100: loss -0.0079 lr 6.25E-04 eps 0.031 (time 0.4124)
+[log] Annealing max_lr
+Step 00110: loss -0.0094 lr 3.13E-04 eps 0.031 (time 0.4046)
+Step 00120: loss -0.0103 lr 3.13E-04 eps 0.031 (time 0.4096)
+[log] Annealing max_lr
+Step 00130: loss -0.0105 lr 1.56E-04 eps 0.031 (time 0.4043)
+[log] Annealing max_lr
+Step 00140: loss -0.0108 lr 7.81E-05 eps 0.031 (time 0.4336)
+[log] Annealing max_lr
+Step 00150: loss -0.0108 lr 5.00E-05 eps 0.031 (time 0.4221)
+Step 00160: loss -0.0108 lr 5.00E-05 eps 0.031 (time 0.4145)
+Step 00170: loss -0.0109 lr 5.00E-05 eps 0.031 (time 0.4405)
+Step 00180: loss -0.0110 lr 5.00E-05 eps 0.031 (time 0.4353)
+Step 00190: loss -0.0110 lr 5.00E-05 eps 0.031 (time 0.4132)
+Step 00200: loss -0.0110 lr 5.00E-05 eps 0.031 (time 0.4028)
+Step 00210: loss -0.0111 lr 5.00E-05 eps 0.031 (time 0.4387)
+Step 00220: loss -0.0110 lr 5.00E-05 eps 0.031 (time 0.4261)
+Step 00230: loss -0.0111 lr 5.00E-05 eps 0.031 (time 0.4106)
+Step 00240: loss -0.0112 lr 5.00E-05 eps 0.031 (time 0.4057)
+Step 00250: loss -0.0111 lr 5.00E-05 eps 0.031 (time 0.4201)
+Step 00260: loss -0.0111 lr 5.00E-05 eps 0.031 (time 0.4296)
+Step 00270: loss -0.0112 lr 5.00E-05 eps 0.031 (time 0.4354)
+Step 00280: loss -0.0112 lr 5.00E-05 eps 0.031 (time 0.4643)
+Step 00290: loss -0.0113 lr 5.00E-05 eps 0.031 (time 0.4369)
+Step 00300: loss -0.0113 lr 5.00E-05 eps 0.031 (time 0.4159)
+Step 00310: loss -0.0114 lr 5.00E-05 eps 0.031 (time 0.4105)
+Step 00320: loss -0.0115 lr 5.00E-05 eps 0.031 (time 0.4085)
+Step 00330: loss -0.0116 lr 5.00E-05 eps 0.031 (time 0.4134)
+Step 00340: loss -0.0118 lr 5.00E-05 eps 0.031 (time 0.4206)
+Step 00350: loss -0.0119 lr 5.00E-05 eps 0.031 (time 0.4352)
+Step 00360: loss -0.0120 lr 5.00E-05 eps 0.031 (time 0.4180)
+Step 00370: loss -0.0120 lr 5.00E-05 eps 0.031 (time 0.4460)
+Step 00380: loss -0.0121 lr 5.00E-05 eps 0.031 (time 0.4091)
+Step 00390: loss -0.0121 lr 5.00E-05 eps 0.031 (time 0.4034)
+Step 00400: loss -0.0121 lr 5.00E-05 eps 0.031 (time 0.4285)
+Step 00410: loss -0.0121 lr 5.00E-05 eps 0.031 (time 0.4494)
+Step 00420: loss -0.0121 lr 5.00E-05 eps 0.031 (time 0.4600)
+Step 00430: loss -0.0122 lr 5.00E-05 eps 0.031 (time 0.4064)
+Step 00440: loss -0.0122 lr 5.00E-05 eps 0.031 (time 0.4254)
+Step 00450: loss -0.0122 lr 5.00E-05 eps 0.031 (time 0.4283)
+Step 00460: loss -0.0122 lr 5.00E-05 eps 0.031 (time 0.4159)
+Step 00470: loss -0.0123 lr 5.00E-05 eps 0.031 (time 0.4194)
+Step 00480: loss -0.0123 lr 5.00E-05 eps 0.031 (time 0.4648)
+Step 00490: loss -0.0124 lr 5.00E-05 eps 0.031 (time 0.4422)
+Step 00500: loss -0.0124 lr 5.00E-05 eps 0.031 (time 0.4356)
+Step 00510: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00520: loss -0.0124 lr 5.00E-05 eps 0.031 (time 0.4445)
+Step 00530: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4099)
+Step 00540: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4205)
+Step 00550: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4100)
+Step 00560: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4119)
+Step 00570: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4062)
+Step 00580: loss -0.0126 lr 5.00E-05 eps 0.031 (time 0.4097)
+Step 00590: loss -0.0125 lr 5.00E-05 eps 0.031 (time 0.4445)
+clipimage succImages: 44  totalImages: 65
+attacking image index : 76
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 6.9240)
+[log] Annealing max_lr
+Step 00010: loss -0.0032 lr 5.00E-03 eps 0.031 (time 0.4040)
+[log] Annealing max_lr
+Step 00020: loss -0.2464 lr 2.50E-03 eps 0.031 (time 0.4065)
+[log] early stopping at iteration 21
+clipimage succImages: 45  totalImages: 66
+attacking image index : 77
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 7.1042)
+[log] Annealing max_lr
+Step 00010: loss -0.0003 lr 5.00E-03 eps 0.031 (time 0.4024)
+Step 00020: loss -0.0565 lr 5.00E-03 eps 0.031 (time 0.4263)
+[log] Annealing max_lr
+[log] early stopping at iteration 25
+clipimage succImages: 46  totalImages: 67
+attacking image index : 78
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0002 lr 1.00E-02 eps 0.031 (time 7.4453)
+[log] Annealing max_lr
+Step 00010: loss -0.0127 lr 5.00E-03 eps 0.031 (time 0.4037)
+[log] Annealing max_lr
+Step 00020: loss -0.1702 lr 2.50E-03 eps 0.031 (time 0.3972)
+[log] early stopping at iteration 22
+clipimage succImages: 47  totalImages: 68
+attacking image index : 79
+chose pseudorandom target class: 7
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 6.6352)
+[log] Annealing max_lr
+Step 00010: loss -0.0001 lr 5.00E-03 eps 0.031 (time 0.4080)
+[log] Annealing max_lr
+Step 00020: loss -0.0003 lr 2.50E-03 eps 0.031 (time 0.3936)
+[log] Annealing max_lr
+Step 00030: loss -0.0005 lr 1.25E-03 eps 0.031 (time 0.4112)
+[log] Annealing max_lr
+Step 00040: loss -0.0006 lr 6.25E-04 eps 0.031 (time 0.4165)
+Step 00050: loss -0.0007 lr 6.25E-04 eps 0.031 (time 0.4271)
+Step 00060: loss -0.0007 lr 6.25E-04 eps 0.031 (time 0.4098)
+Step 00070: loss -0.0007 lr 6.25E-04 eps 0.031 (time 0.4056)
+Step 00080: loss -0.0007 lr 6.25E-04 eps 0.031 (time 0.4399)
+[log] Annealing max_lr
+Step 00090: loss -0.0007 lr 3.13E-04 eps 0.031 (time 0.4275)
+Step 00100: loss -0.0007 lr 3.13E-04 eps 0.031 (time 0.4220)
+Step 00110: loss -0.0008 lr 3.13E-04 eps 0.031 (time 0.4281)
+[log] Annealing max_lr
+Step 00120: loss -0.0008 lr 1.56E-04 eps 0.031 (time 0.4189)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00130: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4284)
+Step 00140: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4276)
+Step 00150: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00160: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4018)
+Step 00170: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4181)
+Step 00180: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4424)
+Step 00190: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4108)
+Step 00200: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4181)
+Step 00210: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4255)
+Step 00220: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4108)
+Step 00230: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4368)
+Step 00240: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4007)
+Step 00250: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4226)
+Step 00260: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4208)
+Step 00270: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4394)
+Step 00280: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4081)
+Step 00290: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4261)
+Step 00300: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4138)
+Step 00310: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4104)
+Step 00320: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4000)
+Step 00330: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4067)
+Step 00340: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4211)
+Step 00350: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4303)
+Step 00360: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4302)
+Step 00370: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4368)
+Step 00380: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4253)
+Step 00390: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4612)
+Step 00400: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4379)
+Step 00410: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00420: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4248)
+Step 00430: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4297)
+Step 00440: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4183)
+Step 00450: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4191)
+Step 00460: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4004)
+Step 00470: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4316)
+Step 00480: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4573)
+Step 00490: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4213)
+Step 00500: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4072)
+Step 00510: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4295)
+Step 00520: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4208)
+Step 00530: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.3989)
+Step 00540: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4178)
+Step 00550: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4152)
+Step 00560: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4107)
+Step 00570: loss -0.0008 lr 5.00E-05 eps 0.031 (time 0.4180)
+Step 00580: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4258)
+Step 00590: loss -0.0009 lr 5.00E-05 eps 0.031 (time 0.4125)
+clipimage succImages: 47  totalImages: 69
+attacking image index : 80
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 7.1145)
+[log] Annealing max_lr
+Step 00010: loss -0.0120 lr 5.00E-03 eps 0.031 (time 0.3973)
+[log] Annealing max_lr
+[log] early stopping at iteration 20
+clipimage succImages: 48  totalImages: 70
+attacking image index : 81
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0054 lr 1.00E-02 eps 0.031 (time 6.6459)
+[log] Annealing max_lr
+Step 00010: loss -0.0123 lr 5.00E-03 eps 0.031 (time 0.4126)
+[log] Annealing max_lr
+Step 00020: loss -0.0323 lr 2.50E-03 eps 0.031 (time 0.4021)
+Step 00030: loss -0.0909 lr 2.50E-03 eps 0.031 (time 0.3970)
+[log] Annealing max_lr
+Step 00040: loss -0.1114 lr 1.25E-03 eps 0.031 (time 0.3980)
+Step 00050: loss -0.1367 lr 1.25E-03 eps 0.031 (time 0.4093)
+Step 00060: loss -0.1581 lr 1.25E-03 eps 0.031 (time 0.4061)
+Step 00070: loss -0.1700 lr 1.25E-03 eps 0.031 (time 0.4027)
+Step 00080: loss -0.1804 lr 1.25E-03 eps 0.031 (time 0.4161)
+[log] Annealing max_lr
+Step 00090: loss -0.1877 lr 6.25E-04 eps 0.031 (time 0.4316)
+Step 00100: loss -0.1910 lr 6.25E-04 eps 0.031 (time 0.4256)
+[log] Annealing max_lr
+Step 00110: loss -0.1934 lr 3.13E-04 eps 0.031 (time 0.4393)
+Step 00120: loss -0.1950 lr 3.13E-04 eps 0.031 (time 0.4131)
+Step 00130: loss -0.1975 lr 3.13E-04 eps 0.031 (time 0.4300)
+[log] Annealing max_lr
+Step 00140: loss -0.1989 lr 1.56E-04 eps 0.031 (time 0.4036)
+[log] Annealing max_lr
+Step 00150: loss -0.1991 lr 7.81E-05 eps 0.031 (time 0.4019)
+[log] Annealing max_lr
+Step 00160: loss -0.1993 lr 5.00E-05 eps 0.031 (time 0.4240)
+Step 00170: loss -0.1996 lr 5.00E-05 eps 0.031 (time 0.4054)
+Step 00180: loss -0.1998 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00190: loss -0.2000 lr 5.00E-05 eps 0.031 (time 0.4175)
+Step 00200: loss -0.2001 lr 5.00E-05 eps 0.031 (time 0.4213)
+Step 00210: loss -0.2001 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00220: loss -0.2000 lr 5.00E-05 eps 0.031 (time 0.4178)
+Step 00230: loss -0.2001 lr 5.00E-05 eps 0.031 (time 0.3974)
+Step 00240: loss -0.2004 lr 5.00E-05 eps 0.031 (time 0.4132)
+Step 00250: loss -0.2004 lr 5.00E-05 eps 0.031 (time 0.4253)
+Step 00260: loss -0.2003 lr 5.00E-05 eps 0.031 (time 0.4064)
+Step 00270: loss -0.2007 lr 5.00E-05 eps 0.031 (time 0.4134)
+Step 00280: loss -0.2007 lr 5.00E-05 eps 0.031 (time 0.4035)
+Step 00290: loss -0.2008 lr 5.00E-05 eps 0.031 (time 0.4045)
+Step 00300: loss -0.2009 lr 5.00E-05 eps 0.031 (time 0.4813)
+Step 00310: loss -0.2009 lr 5.00E-05 eps 0.031 (time 0.4424)
+Step 00320: loss -0.2011 lr 5.00E-05 eps 0.031 (time 0.4320)
+Step 00330: loss -0.2012 lr 5.00E-05 eps 0.031 (time 0.4137)
+Step 00340: loss -0.2010 lr 5.00E-05 eps 0.031 (time 0.4112)
+Step 00350: loss -0.2012 lr 5.00E-05 eps 0.031 (time 0.4324)
+Step 00360: loss -0.2010 lr 5.00E-05 eps 0.031 (time 0.4011)
+Step 00370: loss -0.2014 lr 5.00E-05 eps 0.031 (time 0.4062)
+Step 00380: loss -0.2014 lr 5.00E-05 eps 0.031 (time 0.4274)
+Step 00390: loss -0.2013 lr 5.00E-05 eps 0.031 (time 0.4235)
+Step 00400: loss -0.2012 lr 5.00E-05 eps 0.031 (time 0.4709)
+Step 00410: loss -0.2013 lr 5.00E-05 eps 0.031 (time 0.4428)
+Step 00420: loss -0.2013 lr 5.00E-05 eps 0.031 (time 0.4192)
+Step 00430: loss -0.2015 lr 5.00E-05 eps 0.031 (time 0.4568)
+Step 00440: loss -0.2014 lr 5.00E-05 eps 0.031 (time 0.4667)
+Step 00450: loss -0.2015 lr 5.00E-05 eps 0.031 (time 0.4162)
+Step 00460: loss -0.2016 lr 5.00E-05 eps 0.031 (time 0.4328)
+Step 00470: loss -0.2014 lr 5.00E-05 eps 0.031 (time 0.4472)
+Step 00480: loss -0.2015 lr 5.00E-05 eps 0.031 (time 0.4192)
+Step 00490: loss -0.2016 lr 5.00E-05 eps 0.031 (time 0.4275)
+Step 00500: loss -0.2016 lr 5.00E-05 eps 0.031 (time 0.4065)
+Step 00510: loss -0.2015 lr 5.00E-05 eps 0.031 (time 0.4118)
+Step 00520: loss -0.2016 lr 5.00E-05 eps 0.031 (time 0.4280)
+Step 00530: loss -0.2018 lr 5.00E-05 eps 0.031 (time 0.4200)
+Step 00540: loss -0.2015 lr 5.00E-05 eps 0.031 (time 0.4176)
+Step 00550: loss -0.2017 lr 5.00E-05 eps 0.031 (time 0.4154)
+Step 00560: loss -0.2018 lr 5.00E-05 eps 0.031 (time 0.4365)
+Step 00570: loss -0.2020 lr 5.00E-05 eps 0.031 (time 0.4277)
+Step 00580: loss -0.2019 lr 5.00E-05 eps 0.031 (time 0.4124)
+Step 00590: loss -0.2021 lr 5.00E-05 eps 0.031 (time 0.4062)
+clipimage succImages: 48  totalImages: 71
+attacking image index : 82
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0003 lr 1.00E-02 eps 0.031 (time 7.0065)
+[log] Annealing max_lr
+Step 00010: loss -0.0007 lr 5.00E-03 eps 0.031 (time 0.4039)
+[log] Annealing max_lr
+Step 00020: loss -0.0013 lr 2.50E-03 eps 0.031 (time 0.4182)
+[log] Annealing max_lr
+Step 00030: loss -0.0016 lr 1.25E-03 eps 0.031 (time 0.4377)
+Step 00040: loss -0.0026 lr 1.25E-03 eps 0.031 (time 0.3979)
+Step 00050: loss -0.0030 lr 1.25E-03 eps 0.031 (time 0.4253)
+Step 00060: loss -0.0034 lr 1.25E-03 eps 0.031 (time 0.4274)
+[log] Annealing max_lr
+Step 00070: loss -0.0037 lr 6.25E-04 eps 0.031 (time 0.4385)
+Step 00080: loss -0.0039 lr 6.25E-04 eps 0.031 (time 0.4272)
+[log] Annealing max_lr
+Step 00090: loss -0.0040 lr 3.13E-04 eps 0.031 (time 0.4385)
+Step 00100: loss -0.0040 lr 3.13E-04 eps 0.031 (time 0.4088)
+Step 00110: loss -0.0041 lr 3.13E-04 eps 0.031 (time 0.4410)
+Step 00120: loss -0.0042 lr 3.13E-04 eps 0.031 (time 0.4499)
+[log] Annealing max_lr
+Step 00130: loss -0.0042 lr 1.56E-04 eps 0.031 (time 0.4160)
+[log] Annealing max_lr
+Step 00140: loss -0.0042 lr 7.81E-05 eps 0.031 (time 0.4031)
+[log] Annealing max_lr
+Step 00150: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.4108)
+Step 00160: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.4132)
+Step 00170: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.4047)
+Step 00180: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.4141)
+Step 00190: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.4135)
+Step 00200: loss -0.0042 lr 5.00E-05 eps 0.031 (time 0.4091)
+Step 00210: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4137)
+Step 00220: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4089)
+Step 00230: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4181)
+Step 00240: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4110)
+Step 00250: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4347)
+Step 00260: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4095)
+Step 00270: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00280: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4262)
+Step 00290: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4114)
+Step 00300: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4220)
+Step 00310: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4179)
+Step 00320: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4184)
+Step 00330: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4606)
+Step 00340: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4227)
+Step 00350: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4068)
+Step 00360: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4700)
+Step 00370: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4197)
+Step 00380: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4317)
+Step 00390: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4624)
+Step 00400: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4558)
+Step 00410: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4417)
+Step 00420: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4052)
+Step 00430: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4181)
+Step 00440: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00450: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4348)
+Step 00460: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4107)
+Step 00470: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.3995)
+Step 00480: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4233)
+Step 00490: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00500: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4228)
+Step 00510: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4304)
+Step 00520: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4573)
+Step 00530: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4459)
+Step 00540: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4467)
+Step 00550: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4327)
+Step 00560: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4360)
+Step 00570: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4340)
+Step 00580: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4092)
+Step 00590: loss -0.0043 lr 5.00E-05 eps 0.031 (time 0.4243)
+clipimage succImages: 48  totalImages: 72
+attacking image index : 83
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 6.7712)
+[log] Annealing max_lr
+Step 00010: loss -0.0002 lr 5.00E-03 eps 0.031 (time 0.4206)
+[log] Annealing max_lr
+Step 00020: loss -0.0005 lr 2.50E-03 eps 0.031 (time 0.4145)
+Step 00030: loss -0.0007 lr 2.50E-03 eps 0.031 (time 0.4249)
+[log] Annealing max_lr
+Step 00040: loss -0.0013 lr 1.25E-03 eps 0.031 (time 0.4098)
+Step 00050: loss -0.0020 lr 1.25E-03 eps 0.031 (time 0.4155)
+Step 00060: loss -0.0025 lr 1.25E-03 eps 0.031 (time 0.4047)
+Step 00070: loss -0.0042 lr 1.25E-03 eps 0.031 (time 0.4201)
+Step 00080: loss -0.0058 lr 1.25E-03 eps 0.031 (time 0.4211)
+Step 00090: loss -0.0092 lr 1.25E-03 eps 0.031 (time 0.4411)
+[log] Annealing max_lr
+Step 00100: loss -0.0116 lr 6.25E-04 eps 0.031 (time 0.4206)
+Step 00110: loss -0.0186 lr 6.25E-04 eps 0.031 (time 0.4138)
+[log] Annealing max_lr
+Step 00120: loss -0.0211 lr 3.13E-04 eps 0.031 (time 0.4060)
+Step 00130: loss -0.0224 lr 3.13E-04 eps 0.031 (time 0.4299)
+Step 00140: loss -0.0238 lr 3.13E-04 eps 0.031 (time 0.4328)
+Step 00150: loss -0.0248 lr 3.13E-04 eps 0.031 (time 0.4188)
+[log] Annealing max_lr
+Step 00160: loss -0.0256 lr 1.56E-04 eps 0.031 (time 0.4254)
+Step 00170: loss -0.0265 lr 1.56E-04 eps 0.031 (time 0.4178)
+[log] Annealing max_lr
+Step 00180: loss -0.0266 lr 7.81E-05 eps 0.031 (time 0.4166)
+[log] Annealing max_lr
+Step 00190: loss -0.0268 lr 5.00E-05 eps 0.031 (time 0.4361)
+Step 00200: loss -0.0268 lr 5.00E-05 eps 0.031 (time 0.4243)
+Step 00210: loss -0.0269 lr 5.00E-05 eps 0.031 (time 0.4323)
+Step 00220: loss -0.0270 lr 5.00E-05 eps 0.031 (time 0.4583)
+Step 00230: loss -0.0270 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00240: loss -0.0272 lr 5.00E-05 eps 0.031 (time 0.4474)
+Step 00250: loss -0.0271 lr 5.00E-05 eps 0.031 (time 0.4333)
+Step 00260: loss -0.0272 lr 5.00E-05 eps 0.031 (time 0.4169)
+Step 00270: loss -0.0273 lr 5.00E-05 eps 0.031 (time 0.4346)
+Step 00280: loss -0.0275 lr 5.00E-05 eps 0.031 (time 0.4275)
+Step 00290: loss -0.0279 lr 5.00E-05 eps 0.031 (time 0.4425)
+Step 00300: loss -0.0278 lr 5.00E-05 eps 0.031 (time 0.4218)
+Step 00310: loss -0.0282 lr 5.00E-05 eps 0.031 (time 0.4537)
+Step 00320: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4226)
+Step 00330: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4090)
+Step 00340: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4149)
+Step 00350: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4061)
+Step 00360: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4014)
+Step 00370: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4343)
+Step 00380: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4420)
+Step 00390: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4107)
+Step 00400: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4224)
+Step 00410: loss -0.0286 lr 5.00E-05 eps 0.031 (time 0.4216)
+Step 00420: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4113)
+Step 00430: loss -0.0284 lr 5.00E-05 eps 0.031 (time 0.4106)
+Step 00440: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4453)
+Step 00450: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4342)
+Step 00460: loss -0.0285 lr 5.00E-05 eps 0.031 (time 0.4225)
+Step 00470: loss -0.0286 lr 5.00E-05 eps 0.031 (time 0.4334)
+Step 00480: loss -0.0291 lr 5.00E-05 eps 0.031 (time 0.4337)
+Step 00490: loss -0.0290 lr 5.00E-05 eps 0.031 (time 0.4263)
+Step 00500: loss -0.0291 lr 5.00E-05 eps 0.031 (time 0.4450)
+Step 00510: loss -0.0292 lr 5.00E-05 eps 0.031 (time 0.4176)
+Step 00520: loss -0.0291 lr 5.00E-05 eps 0.031 (time 0.4311)
+Step 00530: loss -0.0292 lr 5.00E-05 eps 0.031 (time 0.4249)
+Step 00540: loss -0.0291 lr 5.00E-05 eps 0.031 (time 0.5088)
+Step 00550: loss -0.0295 lr 5.00E-05 eps 0.031 (time 0.4798)
+Step 00560: loss -0.0294 lr 5.00E-05 eps 0.031 (time 0.4043)
+Step 00570: loss -0.0293 lr 5.00E-05 eps 0.031 (time 0.3966)
+Step 00580: loss -0.0293 lr 5.00E-05 eps 0.031 (time 0.4227)
+Step 00590: loss -0.0294 lr 5.00E-05 eps 0.031 (time 0.4085)
+clipimage succImages: 48  totalImages: 73
+attacking image index : 84
+chose pseudorandom target class: 1
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0042 lr 1.00E-02 eps 0.031 (time 6.9430)
+[log] Annealing max_lr
+[log] early stopping at iteration 9
+clipimage succImages: 49  totalImages: 74
+attacking image index : 85
+chose pseudorandom target class: 0
+Called
+restored
+skip the wrong example  85
+clipimage succImages: 49  totalImages: 74
+attacking image index : 86
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0034 lr 1.00E-02 eps 0.031 (time 7.7024)
+[log] Annealing max_lr
+Step 00010: loss -0.0159 lr 5.00E-03 eps 0.031 (time 0.4125)
+Step 00020: loss -0.1425 lr 5.00E-03 eps 0.031 (time 0.4208)
+[log] Annealing max_lr
+Step 00030: loss -0.3902 lr 2.50E-03 eps 0.031 (time 0.4173)
+[log] early stopping at iteration 34
+clipimage succImages: 50  totalImages: 75
+attacking image index : 87
+chose pseudorandom target class: 6
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0039 lr 1.00E-02 eps 0.031 (time 7.0322)
+[log] Annealing max_lr
+Step 00010: loss -0.0755 lr 5.00E-03 eps 0.031 (time 0.4153)
+[log] Annealing max_lr
+[log] early stopping at iteration 18
+clipimage succImages: 51  totalImages: 76
+attacking image index : 88
+chose pseudorandom target class: 0
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 7.7845)
+[log] Annealing max_lr
+Step 00010: loss -0.0003 lr 5.00E-03 eps 0.031 (time 0.4094)
+[log] Annealing max_lr
+Step 00020: loss -0.0016 lr 2.50E-03 eps 0.031 (time 0.4019)
+[log] Annealing max_lr
+Step 00030: loss -0.0069 lr 1.25E-03 eps 0.031 (time 0.4238)
+Step 00040: loss -0.0197 lr 1.25E-03 eps 0.031 (time 0.3995)
+Step 00050: loss -0.0674 lr 1.25E-03 eps 0.031 (time 0.4546)
+[log] Annealing max_lr
+Step 00060: loss -0.1106 lr 6.25E-04 eps 0.031 (time 0.4026)
+Step 00070: loss -0.2743 lr 6.25E-04 eps 0.031 (time 0.4345)
+Step 00080: loss -0.3126 lr 6.25E-04 eps 0.031 (time 0.4127)
+Step 00090: loss -0.3687 lr 6.25E-04 eps 0.031 (time 0.4286)
+Step 00100: loss -0.4446 lr 6.25E-04 eps 0.031 (time 0.4200)
+Step 00110: loss -0.5023 lr 6.25E-04 eps 0.031 (time 0.4067)
+[log] early stopping at iteration 112
+clipimage succImages: 52  totalImages: 77
+attacking image index : 89
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 7.4032)
+[log] Annealing max_lr
+Step 00010: loss -0.0004 lr 5.00E-03 eps 0.031 (time 0.4223)
+Step 00020: loss -0.0007 lr 5.00E-03 eps 0.031 (time 0.4229)
+[log] Annealing max_lr
+Step 00030: loss -0.0012 lr 2.50E-03 eps 0.031 (time 0.4114)
+Step 00040: loss -0.0027 lr 2.50E-03 eps 0.031 (time 0.4140)
+[log] Annealing max_lr
+Step 00050: loss -0.0046 lr 1.25E-03 eps 0.031 (time 0.4039)
+Step 00060: loss -0.0069 lr 1.25E-03 eps 0.031 (time 0.4102)
+Step 00070: loss -0.0079 lr 1.25E-03 eps 0.031 (time 0.4250)
+Step 00080: loss -0.0095 lr 1.25E-03 eps 0.031 (time 0.4024)
+Step 00090: loss -0.0102 lr 1.25E-03 eps 0.031 (time 0.4224)
+Step 00100: loss -0.0118 lr 1.25E-03 eps 0.031 (time 0.4094)
+[log] Annealing max_lr
+Step 00110: loss -0.0135 lr 6.25E-04 eps 0.031 (time 0.4258)
+Step 00120: loss -0.0142 lr 6.25E-04 eps 0.031 (time 0.4037)
+[log] Annealing max_lr
+Step 00130: loss -0.0146 lr 3.13E-04 eps 0.031 (time 0.4060)
+[log] Annealing max_lr
+Step 00140: loss -0.0148 lr 1.56E-04 eps 0.031 (time 0.4182)
+[log] Annealing max_lr
+Step 00150: loss -0.0148 lr 7.81E-05 eps 0.031 (time 0.4257)
+Step 00160: loss -0.0149 lr 7.81E-05 eps 0.031 (time 0.4213)
+[log] Annealing max_lr
+Step 00170: loss -0.0150 lr 5.00E-05 eps 0.031 (time 0.4207)
+Step 00180: loss -0.0150 lr 5.00E-05 eps 0.031 (time 0.4128)
+Step 00190: loss -0.0151 lr 5.00E-05 eps 0.031 (time 0.4065)
+Step 00200: loss -0.0151 lr 5.00E-05 eps 0.031 (time 0.4356)
+Step 00210: loss -0.0152 lr 5.00E-05 eps 0.031 (time 0.4166)
+Step 00220: loss -0.0152 lr 5.00E-05 eps 0.031 (time 0.4180)
+Step 00230: loss -0.0153 lr 5.00E-05 eps 0.031 (time 0.4069)
+Step 00240: loss -0.0153 lr 5.00E-05 eps 0.031 (time 0.4040)
+Step 00250: loss -0.0154 lr 5.00E-05 eps 0.031 (time 0.4089)
+Step 00260: loss -0.0155 lr 5.00E-05 eps 0.031 (time 0.4152)
+Step 00270: loss -0.0155 lr 5.00E-05 eps 0.031 (time 0.4004)
+Step 00280: loss -0.0155 lr 5.00E-05 eps 0.031 (time 0.4117)
+Step 00290: loss -0.0156 lr 5.00E-05 eps 0.031 (time 0.4322)
+Step 00300: loss -0.0156 lr 5.00E-05 eps 0.031 (time 0.4188)
+Step 00310: loss -0.0157 lr 5.00E-05 eps 0.031 (time 0.4254)
+Step 00320: loss -0.0158 lr 5.00E-05 eps 0.031 (time 0.4140)
+Step 00330: loss -0.0158 lr 5.00E-05 eps 0.031 (time 0.4147)
+Step 00340: loss -0.0158 lr 5.00E-05 eps 0.031 (time 0.4212)
+Step 00350: loss -0.0159 lr 5.00E-05 eps 0.031 (time 0.4259)
+Step 00360: loss -0.0159 lr 5.00E-05 eps 0.031 (time 0.4281)
+Step 00370: loss -0.0159 lr 5.00E-05 eps 0.031 (time 0.4095)
+Step 00380: loss -0.0159 lr 5.00E-05 eps 0.031 (time 0.4201)
+Step 00390: loss -0.0159 lr 5.00E-05 eps 0.031 (time 0.4377)
+Step 00400: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4062)
+Step 00410: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4136)
+Step 00420: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4052)
+Step 00430: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4136)
+Step 00440: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4408)
+Step 00450: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4431)
+Step 00460: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4190)
+Step 00470: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4145)
+Step 00480: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4294)
+Step 00490: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4072)
+Step 00500: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4076)
+Step 00510: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4447)
+Step 00520: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4498)
+Step 00530: loss -0.0161 lr 5.00E-05 eps 0.031 (time 0.4515)
+Step 00540: loss -0.0161 lr 5.00E-05 eps 0.031 (time 0.4381)
+Step 00550: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4443)
+Step 00560: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4059)
+Step 00570: loss -0.0160 lr 5.00E-05 eps 0.031 (time 0.4040)
+Step 00580: loss -0.0161 lr 5.00E-05 eps 0.031 (time 0.4148)
+Step 00590: loss -0.0161 lr 5.00E-05 eps 0.031 (time 0.4055)
+clipimage succImages: 52  totalImages: 78
+attacking image index : 90
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 7.4118)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4104)
+Step 00020: loss -0.0003 lr 5.00E-03 eps 0.031 (time 0.4102)
+[log] Annealing max_lr
+Step 00030: loss -0.0687 lr 2.50E-03 eps 0.031 (time 0.4140)
+[log] Annealing max_lr
+[log] early stopping at iteration 37
+clipimage succImages: 53  totalImages: 79
+attacking image index : 91
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 7.7528)
+[log] Annealing max_lr
+Step 00010: loss -0.0158 lr 5.00E-03 eps 0.031 (time 0.4058)
+[log] Annealing max_lr
+[log] early stopping at iteration 20
+clipimage succImages: 54  totalImages: 80
+attacking image index : 92
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 7.1799)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4100)
+[log] Annealing max_lr
+Step 00020: loss -0.0002 lr 2.50E-03 eps 0.031 (time 0.4079)
+[log] Annealing max_lr
+Step 00030: loss -0.0003 lr 1.25E-03 eps 0.031 (time 0.4116)
+Step 00040: loss -0.0004 lr 1.25E-03 eps 0.031 (time 0.4126)
+Step 00050: loss -0.0005 lr 1.25E-03 eps 0.031 (time 0.4116)
+Step 00060: loss -0.0006 lr 1.25E-03 eps 0.031 (time 0.4228)
+[log] Annealing max_lr
+Step 00070: loss -0.0007 lr 6.25E-04 eps 0.031 (time 0.3998)
+Step 00080: loss -0.0008 lr 6.25E-04 eps 0.031 (time 0.4251)
+Step 00090: loss -0.0010 lr 6.25E-04 eps 0.031 (time 0.4031)
+Step 00100: loss -0.0011 lr 6.25E-04 eps 0.031 (time 0.4179)
+[log] Annealing max_lr
+Step 00110: loss -0.0011 lr 3.13E-04 eps 0.031 (time 0.4187)
+[log] Annealing max_lr
+Step 00120: loss -0.0011 lr 1.56E-04 eps 0.031 (time 0.4047)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00130: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4356)
+Step 00140: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4142)
+Step 00150: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4247)
+Step 00160: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4271)
+Step 00170: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4524)
+Step 00180: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4150)
+Step 00190: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4027)
+Step 00200: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4086)
+Step 00210: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4124)
+Step 00220: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4440)
+Step 00230: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4123)
+Step 00240: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4482)
+Step 00250: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4279)
+Step 00260: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4256)
+Step 00270: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4303)
+Step 00280: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4415)
+Step 00290: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4131)
+Step 00300: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4304)
+Step 00310: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4297)
+Step 00320: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4114)
+Step 00330: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4055)
+Step 00340: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4105)
+Step 00350: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4403)
+Step 00360: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4147)
+Step 00370: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4127)
+Step 00380: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4589)
+Step 00390: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4168)
+Step 00400: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4408)
+Step 00410: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4193)
+Step 00420: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4431)
+Step 00430: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4125)
+Step 00440: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4132)
+Step 00450: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4027)
+Step 00460: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4116)
+Step 00470: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4533)
+Step 00480: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4075)
+Step 00490: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4391)
+Step 00500: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4337)
+Step 00510: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4272)
+Step 00520: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4515)
+Step 00530: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4174)
+Step 00540: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4197)
+Step 00550: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4149)
+Step 00560: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4076)
+Step 00570: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4535)
+Step 00580: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4453)
+Step 00590: loss -0.0012 lr 5.00E-05 eps 0.031 (time 0.4522)
+clipimage succImages: 54  totalImages: 81
+attacking image index : 93
+chose pseudorandom target class: 5
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 7.8742)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4113)
+[log] Annealing max_lr
+Step 00020: loss -0.0002 lr 2.50E-03 eps 0.031 (time 0.4165)
+[log] Annealing max_lr
+Step 00030: loss -0.0012 lr 1.25E-03 eps 0.031 (time 0.4398)
+Step 00040: loss -0.0072 lr 1.25E-03 eps 0.031 (time 0.4248)
+Step 00050: loss -0.0200 lr 1.25E-03 eps 0.031 (time 0.4326)
+Step 00060: loss -0.0357 lr 1.25E-03 eps 0.031 (time 0.4202)
+Step 00070: loss -0.0504 lr 1.25E-03 eps 0.031 (time 0.4132)
+[log] Annealing max_lr
+Step 00080: loss -0.0666 lr 6.25E-04 eps 0.031 (time 0.4122)
+Step 00090: loss -0.0911 lr 6.25E-04 eps 0.031 (time 0.4244)
+Step 00100: loss -0.1107 lr 6.25E-04 eps 0.031 (time 0.4580)
+Step 00110: loss -0.1389 lr 6.25E-04 eps 0.031 (time 0.4298)
+Step 00120: loss -0.1530 lr 6.25E-04 eps 0.031 (time 0.4348)
+Step 00130: loss -0.1747 lr 6.25E-04 eps 0.031 (time 0.4253)
+Step 00140: loss -0.2129 lr 6.25E-04 eps 0.031 (time 0.4489)
+[log] Annealing max_lr
+Step 00150: loss -0.2276 lr 3.13E-04 eps 0.031 (time 0.4113)
+Step 00160: loss -0.2457 lr 3.13E-04 eps 0.031 (time 0.4244)
+Step 00170: loss -0.2586 lr 3.13E-04 eps 0.031 (time 0.4288)
+Step 00180: loss -0.2823 lr 3.13E-04 eps 0.031 (time 0.4592)
+Step 00190: loss -0.3272 lr 3.13E-04 eps 0.031 (time 0.4257)
+Step 00200: loss -0.3577 lr 3.13E-04 eps 0.031 (time 0.4339)
+Step 00210: loss -0.3712 lr 3.13E-04 eps 0.031 (time 0.4170)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00220: loss -0.3708 lr 7.81E-05 eps 0.031 (time 0.4087)
+[log] Annealing max_lr
+Step 00230: loss -0.3773 lr 5.00E-05 eps 0.031 (time 0.4037)
+Step 00240: loss -0.3786 lr 5.00E-05 eps 0.031 (time 0.4578)
+Step 00250: loss -0.3802 lr 5.00E-05 eps 0.031 (time 0.4823)
+Step 00260: loss -0.3822 lr 5.00E-05 eps 0.031 (time 0.4456)
+Step 00270: loss -0.3812 lr 5.00E-05 eps 0.031 (time 0.4095)
+Step 00280: loss -0.3851 lr 5.00E-05 eps 0.031 (time 0.4278)
+Step 00290: loss -0.3843 lr 5.00E-05 eps 0.031 (time 0.4427)
+Step 00300: loss -0.3879 lr 5.00E-05 eps 0.031 (time 0.4080)
+Step 00310: loss -0.3848 lr 5.00E-05 eps 0.031 (time 0.4567)
+Step 00320: loss -0.3883 lr 5.00E-05 eps 0.031 (time 0.4016)
+Step 00330: loss -0.3938 lr 5.00E-05 eps 0.031 (time 0.4142)
+Step 00340: loss -0.3893 lr 5.00E-05 eps 0.031 (time 0.4163)
+Step 00350: loss -0.3877 lr 5.00E-05 eps 0.031 (time 0.4076)
+Step 00360: loss -0.3914 lr 5.00E-05 eps 0.031 (time 0.4661)
+Step 00370: loss -0.3910 lr 5.00E-05 eps 0.031 (time 0.4226)
+Step 00380: loss -0.3907 lr 5.00E-05 eps 0.031 (time 0.4077)
+Step 00390: loss -0.3928 lr 5.00E-05 eps 0.031 (time 0.4284)
+Step 00400: loss -0.3918 lr 5.00E-05 eps 0.031 (time 0.4084)
+Step 00410: loss -0.3944 lr 5.00E-05 eps 0.031 (time 0.4119)
+Step 00420: loss -0.3904 lr 5.00E-05 eps 0.031 (time 0.4284)
+Step 00430: loss -0.3959 lr 5.00E-05 eps 0.031 (time 0.4119)
+Step 00440: loss -0.3944 lr 5.00E-05 eps 0.031 (time 0.4029)
+Step 00450: loss -0.3942 lr 5.00E-05 eps 0.031 (time 0.4155)
+Step 00460: loss -0.3944 lr 5.00E-05 eps 0.031 (time 0.4358)
+Step 00470: loss -0.3955 lr 5.00E-05 eps 0.031 (time 0.4376)
+Step 00480: loss -0.3941 lr 5.00E-05 eps 0.031 (time 0.4094)
+Step 00490: loss -0.4004 lr 5.00E-05 eps 0.031 (time 0.4193)
+Step 00500: loss -0.3954 lr 5.00E-05 eps 0.031 (time 0.4153)
+Step 00510: loss -0.3977 lr 5.00E-05 eps 0.031 (time 0.4070)
+Step 00520: loss -0.3959 lr 5.00E-05 eps 0.031 (time 0.4048)
+Step 00530: loss -0.3976 lr 5.00E-05 eps 0.031 (time 0.4349)
+Step 00540: loss -0.3963 lr 5.00E-05 eps 0.031 (time 0.4133)
+Step 00550: loss -0.3962 lr 5.00E-05 eps 0.031 (time 0.4407)
+Step 00560: loss -0.3945 lr 5.00E-05 eps 0.031 (time 0.4105)
+Step 00570: loss -0.3965 lr 5.00E-05 eps 0.031 (time 0.4190)
+Step 00580: loss -0.3953 lr 5.00E-05 eps 0.031 (time 0.4148)
+Step 00590: loss -0.3990 lr 5.00E-05 eps 0.031 (time 0.4266)
+clipimage succImages: 54  totalImages: 82
+attacking image index : 94
+chose pseudorandom target class: 2
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0013 lr 1.00E-02 eps 0.031 (time 7.7858)
+[log] Annealing max_lr
+Step 00010: loss -0.0239 lr 5.00E-03 eps 0.031 (time 0.3993)
+[log] Annealing max_lr
+[log] early stopping at iteration 17
+clipimage succImages: 55  totalImages: 83
+attacking image index : 95
+chose pseudorandom target class: 9
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0009 lr 1.00E-02 eps 0.031 (time 7.7492)
+[log] Annealing max_lr
+Step 00010: loss -0.0103 lr 5.00E-03 eps 0.031 (time 0.4101)
+Step 00020: loss -0.3048 lr 5.00E-03 eps 0.031 (time 0.4018)
+[log] Annealing max_lr
+[log] early stopping at iteration 22
+clipimage succImages: 56  totalImages: 84
+attacking image index : 96
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0000 lr 1.00E-02 eps 0.031 (time 9.1398)
+[log] Annealing max_lr
+Step 00010: loss -0.0000 lr 5.00E-03 eps 0.031 (time 0.4248)
+[log] Annealing max_lr
+Step 00020: loss -0.0004 lr 2.50E-03 eps 0.031 (time 0.4056)
+Step 00030: loss -0.0019 lr 2.50E-03 eps 0.031 (time 0.4012)
+[log] Annealing max_lr
+Step 00040: loss -0.0079 lr 1.25E-03 eps 0.031 (time 0.4043)
+Step 00050: loss -0.0711 lr 1.25E-03 eps 0.031 (time 0.4152)
+[log] Annealing max_lr
+Step 00060: loss -0.1595 lr 6.25E-04 eps 0.031 (time 0.3968)
+Step 00070: loss -0.2158 lr 6.25E-04 eps 0.031 (time 0.3998)
+Step 00080: loss -0.2865 lr 6.25E-04 eps 0.031 (time 0.4252)
+Step 00090: loss -0.3429 lr 6.25E-04 eps 0.031 (time 0.4385)
+Step 00100: loss -0.4115 lr 6.25E-04 eps 0.031 (time 0.4082)
+[log] Annealing max_lr
+Step 00110: loss -0.4578 lr 3.13E-04 eps 0.031 (time 0.4273)
+[log] Annealing max_lr
+Step 00120: loss -0.4872 lr 1.56E-04 eps 0.031 (time 0.4081)
+Step 00130: loss -0.5117 lr 1.56E-04 eps 0.031 (time 0.3996)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00140: loss -0.5225 lr 5.00E-05 eps 0.031 (time 0.4022)
+Step 00150: loss -0.5317 lr 5.00E-05 eps 0.031 (time 0.4074)
+Step 00160: loss -0.5433 lr 5.00E-05 eps 0.031 (time 0.4109)
+Step 00170: loss -0.5531 lr 5.00E-05 eps 0.031 (time 0.4541)
+Step 00180: loss -0.5696 lr 5.00E-05 eps 0.031 (time 0.4051)
+Step 00190: loss -0.5777 lr 5.00E-05 eps 0.031 (time 0.4242)
+Step 00200: loss -0.5863 lr 5.00E-05 eps 0.031 (time 0.4288)
+Step 00210: loss -0.5940 lr 5.00E-05 eps 0.031 (time 0.4087)
+Step 00220: loss -0.5959 lr 5.00E-05 eps 0.031 (time 0.4171)
+Step 00230: loss -0.6003 lr 5.00E-05 eps 0.031 (time 0.4247)
+Step 00240: loss -0.6030 lr 5.00E-05 eps 0.031 (time 0.4249)
+Step 00250: loss -0.6069 lr 5.00E-05 eps 0.031 (time 0.4135)
+Step 00260: loss -0.6019 lr 5.00E-05 eps 0.031 (time 0.4084)
+Step 00270: loss -0.6077 lr 5.00E-05 eps 0.031 (time 0.4220)
+Step 00280: loss -0.6136 lr 5.00E-05 eps 0.031 (time 0.4074)
+[log] early stopping at iteration 289
+clipimage succImages: 57  totalImages: 85
+attacking image index : 97
+chose pseudorandom target class: 3
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0015 lr 1.00E-02 eps 0.031 (time 10.6985)
+[log] Annealing max_lr
+Step 00010: loss -0.0657 lr 5.00E-03 eps 0.031 (time 0.4032)
+[log] early stopping at iteration 14
+clipimage succImages: 58  totalImages: 86
+attacking image index : 98
+chose pseudorandom target class: 4
+Called
+restored
+loading on gpu 1 of 2
+loading on gpu 2 of 2
+Step 00000: loss -0.0001 lr 1.00E-02 eps 0.031 (time 8.6824)
+[log] Annealing max_lr
+Step 00010: loss -0.0004 lr 5.00E-03 eps 0.031 (time 0.4251)
+[log] Annealing max_lr
+Step 00020: loss -0.0008 lr 2.50E-03 eps 0.031 (time 0.4216)
+[log] Annealing max_lr
+Step 00030: loss -0.0011 lr 1.25E-03 eps 0.031 (time 0.4264)
+Step 00040: loss -0.0013 lr 1.25E-03 eps 0.031 (time 0.4202)
+Step 00050: loss -0.0014 lr 1.25E-03 eps 0.031 (time 0.4161)
+[log] Annealing max_lr
+Step 00060: loss -0.0015 lr 6.25E-04 eps 0.031 (time 0.4187)
+Step 00070: loss -0.0015 lr 6.25E-04 eps 0.031 (time 0.4245)
+[log] Annealing max_lr
+Step 00080: loss -0.0016 lr 3.13E-04 eps 0.031 (time 0.3992)
+[log] Annealing max_lr
+Step 00090: loss -0.0016 lr 1.56E-04 eps 0.031 (time 0.4112)
+Step 00100: loss -0.0016 lr 1.56E-04 eps 0.031 (time 0.4265)
+Step 00110: loss -0.0016 lr 1.56E-04 eps 0.031 (time 0.4116)
+[log] Annealing max_lr
+[log] Annealing max_lr
+Step 00120: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4154)
+Step 00130: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4220)
+Step 00140: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4306)
+Step 00150: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4264)
+Step 00160: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4121)
+Step 00170: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4096)
+Step 00180: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4219)
+Step 00190: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4339)
+Step 00200: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4279)
+Step 00210: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4245)
+Step 00220: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4308)
+Step 00230: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4188)
+Step 00240: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4123)
+Step 00250: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4211)
+Step 00260: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4151)
+Step 00270: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4406)
+Step 00280: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4263)
+Step 00290: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4413)
+Step 00300: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4141)
+Step 00310: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4371)
+Step 00320: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4350)
+Step 00330: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4461)
+Step 00340: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4243)
+Step 00350: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4475)
+Step 00360: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4310)
+Step 00370: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4340)
+Step 00380: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4291)
+Step 00390: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4373)
+Step 00400: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4430)
+Step 00410: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4274)
+Step 00420: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4074)
+Step 00430: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4445)
+Step 00440: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4355)
+Step 00450: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4577)
+Step 00460: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4630)
+Step 00470: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4332)
+Step 00480: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4674)
+Step 00490: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4358)
+Step 00500: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4317)
+Step 00510: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4317)
+Step 00520: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4289)
+Step 00530: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4060)
+Step 00540: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4175)
+Step 00550: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4477)
+Step 00560: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4491)
+Step 00570: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4419)
+Step 00580: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4241)
+Step 00590: loss -0.0016 lr 5.00E-05 eps 0.031 (time 0.4357)
+clipimage succImages: 58  totalImages: 87
+query-limited.sh: line 1: 349978 Terminated              python main.py --max-queries 400 --img-index 0 --out-dir query_limited/
