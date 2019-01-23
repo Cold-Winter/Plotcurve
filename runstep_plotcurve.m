@@ -22,11 +22,11 @@ adv_train = [0, 0.5117845117845118, 0.7272727272727273, 0.8653198653198653, 0.91
 
 x = [0:30:400];
 % strain_image = plot(x,redseqdpp,'ks-',x,reseqdpp,'b>-',x,seqdpp_5,'m+:',x,seqdpp,'ro--',x,seqdpp_12,'gd--',x,uniform,'cx-.',x,dpplstm,'k*:');
-strain_image = plot(x,adv_train*0.479,'b*:',x,adv_bnn*0.753,'k<--',x,thermstep*0.91,'m+:',x,lid,'cx-.',x,encoding,'ro--',x,saprunstep,'ks-',x,robuststep,'b>-',x,cascade*0.977,'gd--',x,std,'k*:');
+strain_image = plot(x,adv_train*0.479,'b*:',x,adv_bnn*0.753,'k<--',x,thermstep*0.91,'m+:',x,cascade*0.977,'gd--',x,lid,'cx-.',x,encoding,'ro--',x,saprunstep,'ks-',x,robuststep,'b>-',x,std,'k*:');
 
 ylabel('Attack success Rate %');
 xlabel('Number of iterations T');
-legend('ADV-TRAIN','ADV-BNN','THERM-ADV','LID','THERM','SAP','RSE','CAS-ADV','VANILLA-1');
+legend('ADV-TRAIN','ADV-BNN','THERM-ADV','CAS-ADV','LID','THERM','SAP','RSE','VANILLA-1');
 
 set(gca,'XTick',[0:30:400]);
 % set(gca, 'XTicklabel',{'K=8','K=12','K=16','K=\infty'}); 
